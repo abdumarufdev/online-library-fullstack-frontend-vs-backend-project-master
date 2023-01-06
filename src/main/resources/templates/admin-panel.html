@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Mirzacho'l Axborot-kutubxona markazi | Admin</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+  <link rel="stylesheet" th:href="@{/css/all.min.css}">
+
+  <link rel="stylesheet" th:href="@{/css/test.min.css}">
+
+  <!-- Favicons -->
+  <link href="assets1/img/favicon.png" rel="icon">
+  <link href="assets1/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets1/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets1/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets1/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets1/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets1/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets1/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets1/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets1/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a th:href="@{/admin}" class="logo d-flex align-items-center">
+<!--        <img src="assets1/img/logo.png" alt="">-->
+        <span class="d-none d-lg-block">mirzacholakm.uz</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar text-center text-primary">
+     <h3>Boshqaruv oynasi</h3>
+    </div><!-- End Search Bar -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed bg-primary text-white" th:href="@{/admin}">
+          <i class="bi bi-grid text-white"></i>
+          <span>Boshqaruv paneli</span>
+        </a>
+      </li>
+      <!-- End Dashboard Nav -->
+
+      <li class="nav-heading">Pages</li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/addbook}">
+          <i class="bi bi-bookmarks-fill"></i>
+          <span>Elektron kitoblar</span>
+        </a>
+      </li>
+      <!-- End Profile Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/ijara/books}">
+          <i class="bi bi-calendar-date-fill"></i>
+          <span>Ijara kitoblar</span>
+        </a>
+      </li>
+      <!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/qr/books}">
+          <i class="bi bi-qr-code-scan"></i>
+          <span>QR kodli kitoblar</span>
+        </a>
+      </li>
+      <!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/addNew}">
+          <i class="bi bi-globe2"></i>
+          <span>Yangiliklar</span>
+        </a>
+      </li>
+
+      <!-- End Contact Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/bolim/one}">
+          <i class="bi bi-journal-text"></i>
+          <span>Bo'limlar</span>
+        </a>
+      </li>
+
+
+      <!-- End Components Nav -->
+
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">-->
+<!--          <i class="bi bi-journal-text"></i><span>Bo'limlar</span><i class="bi bi-chevron-down ms-auto"></i>-->
+<!--        </a>-->
+<!--        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">-->
+<!--          <li>-->
+<!--            <a th:href="@{/bolim/one}">-->
+<!--              <i class="bi bi-circle"></i><span>Abonement va foydalanuvchilarga xizmat ko‘rsatish xizmati</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a th:href="@{/bolim/two}">-->
+<!--              <i class="bi bi-circle"></i><span>Axborot-bibliografiya xizmati</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a th:href="@{/bolim/three}">-->
+<!--              <i class="bi bi-circle"></i><span>Fondlarni to‘ldirish, saqlash ishlov berish xizmati</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a th:href="@{/bolim/four}">-->
+<!--              <i class="bi bi-circle"></i><span>Axborot kommunikatsiya texnalogiyalari va raqamlashtirish xizmati</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </li>&lt;!&ndash; End Forms Nav &ndash;&gt;-->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/tadbirlar}">
+          <i class="bi bi-calendar-event-fill"></i>
+          <span>Tadbirlar</span>
+        </a>
+      </li>
+      <!-- End Contact Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/contact-us-panel}">
+          <i class="bi bi-geo-alt"></i>
+          <span>Manzil</span>
+        </a>
+      </li><!-- End Biz bilan bog'lanish Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/about-uz-panel}">
+          <i class="bi bi-microsoft-teams"></i>
+          <span>Biz haqimizda</span>
+        </a>
+      </li>
+      <!-- End Biz haqimizda Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/users}">
+          <i class="bi bi-microsoft-teams"></i>
+          <span>Users</span>
+        </a>
+      </li>
+      <!-- End Users Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/ijaraberilgan}">
+          <i class="bi bi-microsoft-teams"></i>
+          <span>Ijaraga berilgan kitoblar</span>
+        </a>
+      </li>
+      <!-- End Users Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed " th:href="@{/parol}">
+          <i class="bi bi-key-fill "></i>
+          <span>Parol</span>
+        </a>
+      </li>
+    </ul>
+  </aside>
+  <!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Boshqaruv paneli</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="">Home</a></li>
+          <li class="breadcrumb-item active">Boshqaruv paneli</li>
+        </ol>
+      </nav>
+    </div>
+    <!-- End Page Title -->
+    <div class="headers text-center text-primary mb-2">
+      <h2>Mirzacho'l Axborot-kutubxona markazining Admin bo'limi!</h2>
+    </div>
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; <strong><span>mirzacholakm.uz 2022</span></strong>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script th:src="@{/js/jquery.min.js}"></script>
+
+  <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+
+  <script th:src="@{/js/test.min.js}"></script>
+
+  <script th:src="@{/js/demo.js}"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <!-- Vendor JS Files -->
+  <script src="assets1/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets1/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets1/vendor/chart.js/chart.min.js"></script>
+  <script src="assets1/vendor/echarts/echarts.min.js"></script>
+  <script src="assets1/vendor/quill/quill.min.js"></script>
+  <script src="assets1/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets1/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets1/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets1/js/main.js"></script>
+
+</body>
+
+</html>

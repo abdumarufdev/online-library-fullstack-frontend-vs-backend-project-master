@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Mirzacho'l Axborot-kutubxona markazi | Barcha tadbirlar</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <!-- ICONS -->
+  <!-- <link href="assets/img/favicon.png" rel="icon"> -->
+  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  <link rel="stylesheet" th:href="@{/assets/css/ab.css}">
+
+  <!-- Google Fonts -->
+  <link
+          href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link th:href="@{/assets/vendor/aos/aos.css}" rel="stylesheet">
+  <link th:href="@{/assets/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+  <link th:href="@{/ssets/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
+  <link th:href="@{/assets/vendor/boxicons/css/boxicons.min.css}" rel="stylesheet">
+  <link th:href="@{/assets/vendor/glightbox/css/glightbox.min.css}" rel="stylesheet">
+  <link th:href="@{/assets/vendor/swiper/swiper-bundle.min.css}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link th:href="@{/assets/css/style.css}" rel="stylesheet">
+
+  <!-- =======================================================
+
+  ======================================================== -->
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="d-flex align-items-center">
+  <div class="container d-flex align-items-center justify-content-between">
+
+    <h1 class="logo"><a th:href="@{/home}">mirzacholakm<span>.uz</span></a></h1>
+    <!-- image logo -->
+    <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a> -->
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a class="nav-link scrollto active" th:href="@{/home}">Bosh sahifa</a></li>
+        <li class="dropdown scrollto"><a th:href="@{/books}"><span>Kitoblar</span></a>
+        </li>
+        <li class="dropdown scrollto"><a href=""><span>Bo'limlar</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a class="scrollto" th:href="@{/abonement-va-foydalanuvchilarga-xizmat-korsatish-xizmati}">Abonement va foydalanuvchilarga xizmat ko‘rsatish xizmati</a></li>
+            <li><a class="scrollto" th:href="@{/axborot-bibliografiya-xizmati}">Axborot-bibliografiya xizmati</a></li>
+            <li><a class="scrollto" th:href="@{/fondlarni-toldirish-saqlash-ishlov-berish-xizmati}">Fondlarni to‘ldirish, saqlash ishlov berish xizmati</a></li>
+            <li><a class="scrollto" th:href="@{/axborot-kommunikatsiya-texnalogiyalari-va-raqamlashtirish-xizmati}">Axborot kommunikatsiya texnalogiyalari va raqamlashtirish xizmati</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link scrollto" th:href="@{/event/all}">Tadbirlar</a></li>
+        <li><a class="nav-link scrollto" th:href="@{/news}">Yangiliklar</a></li>
+        <li><a class="nav-link scrollto " th:href="@{/about/us}">Biz haqimizda</a></li>
+        <li><a class="nav-link scrollto " th:href="@{/cantact}">Biz bilan bog'lanish</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+      </i>
+    </nav>
+
+    <!-- .navbar -->
+  </div>
+</header>
+<!-- End Header -->
+
+<main id="main">
+
+  <!-- ======= Yangiliklar Section ======= -->
+  <section id="recent-blog-posts" class="recent-blog-posts">
+
+    <div class="container" data-aos="fade-up">
+      <header class="section-header1" data-aos="fade-up" data-aos-delay="200">
+        <h2>Tadbirlar</h2>
+      </header>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12 card p-2 my-2"  style="border: none" th:each = "news : ${AllEvent}">
+          <div class="yangilik p-4 border" id="news-1">
+            <div class="img" style="height: 240px">
+              <img th:src="@{${'/tadbirlar/img/'+news.id}}" class="card-img-top" alt="yangilik uchun rasm!" height="100%">
+            </div>
+            <div class="mt-3" style="">
+              <div style="height: 73px; overflow:hidden;">
+                <span class="sarlavha" style="color: #0a0a0a; font-size: 24px;  " th:text = "${news.sarlavha}">Sarlavha</span>
+              </div>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+                  <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z"/>
+                  <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z"/>
+                  <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"/>
+                </svg>
+                <span style="color: #000" th:text = "${news.sana}">01.10.2022</span>
+              </div>
+            </div>
+            <div class="my-2">
+              <a th:href="@{${'/about/'+news.id}}" class="readmore stretched-link mt-auto"><span>Batafsil</span><i
+                      class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Yangiliklar Section -->
+
+
+</main>
+
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h3>mirzacholakm<span>.uz</span></h3>
+          <p>
+            Mirzacho‘l tumani<br>
+            Mustaqillik MFY<br>
+            O‘zbekiston ko‘chasi, 29-uy <br><br>
+            <strong>Phone:</strong> +998 (99) 777 48-93<br>
+            <strong>Email:</strong> mirzachol_akm@natlib.uz<br>
+          </p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Foydali havolalar</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a th:href="@{/home}">Bosh sahifa</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a th:href="@{/books}">Kitoblar</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a th:href="@{/news}">Yangiliklar</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a th:href="@{/about}">Biz haqimizda</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a th:href="@{/cantact}">Biz bilan aloqa qiling</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Bo'limlar</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a th:href="@{/abonement-va-foydalanuvchilarga-xizmat-korsatish-xizmati}">Abonement va foydalanuvchilarga xizmat ko‘rsatish xizmati</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a th:href="@{/axborot-bibliografiya-xizmati}">Axborot-bibliografiya xizmati</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a th:href="@{/fondlarni-toldirish-saqlash-ishlov-berish-xizmati}">Fondlarni to‘ldirish, saqlash ishlov berish xizmati</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a th:href="@{/axborot-kommunikatsiya-texnalogiyalari-va-raqamlashtirish-xizmati}">Axborot kommunikatsiya texnalogiyalari va raqamlashtirish xizmati</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Bizning ijtimoiy tarmoqlarimiz</h4>
+          <p>Biz ijtimoiy tarmoqlarimiz orqali kuzatib boring
+          </p>
+          <div class="social-links mt-3">
+            <a href="https://www.youtube.com/channel/UCtPS7RSE10r2691hIdOkQQg/featured" class="twitter"><i class="bx bxl-youtube"></i></a>
+            <a href="https://www.facebook.com/groups/2783414248651805/?ref=share" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="https://www.instagram.com/mirzachol_akm?r=nametag" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="https://t.me/MT_AKM" class="google-plus"><i class="bx bxl-telegram"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-4">
+    <div class="copyright1 text-center">
+      <p style="font-size: 12px;">Barcha materiallar www.mirzacholakm.uz saytiga tegishli bolib O‘zbekiston Respublikasi "Mualliflik huquqlari va turdosh huquqlari" qonuni bilan himoyalangan.</p>
+      &copy; <strong><span>mirzacholakm.uz</span> 2022</strong>
+    </div>
+  </div>
+</footer>
+<!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+</svg></i></a>
+
+<!-- Vendor JS Files -->
+<script th:src="@{/assets/vendor/purecounter/purecounter_vanilla.js}"></script>
+<script th:src="@{/assets/vendor/aos/aos.js}"></script>
+<script th:src="@{/assets/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/assets/vendor/glightbox/js/glightbox.min.js}"></script>
+<script th:src="@{/assets/vendor/isotope-layout/isotope.pkgd.min.js}"></script>
+<script th:src="@{/assets/vendor/swiper/swiper-bundle.min.js}"></script>
+<script th:src="@{/assets/vendor/waypoints/noframework.waypoints.js}"></script>
+<script th:src="@{/assets/vendor/php-email-form/validate.js}"></script>
+
+<!-- Template Main JS File -->
+<script th:src="@{/assets/js/main.js}"></script>
+
+</body>
+
+</html>

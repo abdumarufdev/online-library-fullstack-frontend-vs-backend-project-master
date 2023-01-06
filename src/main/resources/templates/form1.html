@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Mirzacho'l Axborot-kutubxona markazi | Bo'limlar</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+  <link rel="stylesheet" th:href="@{/css/all.min.css}">
+
+  <link rel="stylesheet" th:href="@{/css/test.min.css}">
+
+  <!-- Favicons -->
+  <link href="assets1/img/favicon.png" rel="icon">
+  <link href="assets1/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link th:href="@{/assets1/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+  <link th:href="@{/assets1/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
+  <link th:href="@{/assets1/vendor/boxicons/css/boxicons.min.css}" rel="stylesheet">
+  <link th:href="@{/assets1/vendor/quill/quill.snow.css}" rel="stylesheet">
+  <link th:href="@{/assets1/vendor/quill/quill.bubble.css}" rel="stylesheet">
+  <link th:href="@{/assets1/vendor/remixicon/remixicon.css}" rel="stylesheet">
+  <link th:href="@{/assets1/vendor/simple-datatables/style.css}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link th:href="@{/assets1/css/style.css}" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a th:href="@{/admin}" class="logo d-flex align-items-center">
+<!--        <img src="assets1/img/logo.png" alt="">-->
+        <span class="d-none d-lg-block">mirzacholakm.uz</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div>
+    <!-- End Logo -->
+
+    <div class="search-bar text-center text-primary">
+     <h3>Bo'limlar oynasi</h3>
+    </div>
+    <!-- End Search Bar -->
+
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed " th:href="@{/admin}">-->
+<!--          <i class="bi bi-grid"></i>-->
+<!--          <span>Boshqaruv paneli</span>-->
+<!--        </a>-->
+<!--      </li>-->
+      <!-- End Dashboard Nav -->
+
+      <li class="nav-heading">Pages</li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/addbook}">
+          <i class="bi bi-bookmarks-fill"></i>
+          <span>Elektron kitoblar</span>
+        </a>
+      </li>
+      <!-- End Profile Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/ijara/books}">
+          <i class="bi bi-calendar-date-fill"></i>
+          <span>Ijara kitoblar</span>
+        </a>
+      </li>
+      <!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/qr/books}">
+          <i class="bi bi-qr-code-scan"></i>
+          <span>QR kodli kitoblar</span>
+        </a>
+      </li>
+      <!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/addNew}">
+          <i class="bi bi-globe2"></i>
+          <span>Yangiliklar</span>
+        </a>
+      </li>
+
+      <!-- End Contact Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed bg-primary text-white" th:href="@{/bolim/one}">
+          <i class="bi bi-journal-text text-white"></i>
+          <span>Bo'limlar</span>
+        </a>
+      </li>
+
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed bg-primary text-white" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">-->
+<!--          <i class="bi bi-journal-text text-white"></i><span>Bo'limlar</span><i class="bi bi-chevron-down ms-auto"></i>-->
+<!--        </a>-->
+<!--        <ul id="forms-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">-->
+<!--          <li>-->
+<!--            <a th:href="@{/bolim/one}" class="active ">-->
+<!--              <i class="bi bi-circle"></i><span>Abonement va foydalanuvchilarga xizmat ko‘rsatish xizmati</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a th:href="@{/bolim/two}">-->
+<!--              <i class="bi bi-circle"></i><span>Axborot-bibliografiya xizmati</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a th:href="@{/bolim/three}">-->
+<!--              <i class="bi bi-circle"></i><span>Fondlarni to‘ldirish, saqlash ishlov berish xizmati</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a th:href="@{/bolim/four}">-->
+<!--              <i class="bi bi-circle"></i><span>Axborot kommunikatsiya texnalogiyalari va raqamlashtirish xizmati</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </li>-->
+      <!-- End Forms Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/tadbirlar}">
+          <i class="bi bi-calendar-event-fill"></i>
+          <span>Tadbirlar</span>
+        </a>
+      </li>
+      <!-- End Contact Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/contact-us-panel}">
+          <i class="bi bi-geo-alt"></i>
+          <span>Manzil</span>
+        </a>
+      </li><!-- End Biz bilan bog'lanish Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/about-uz-panel}">
+          <i class="bi bi-microsoft-teams"></i>
+          <span>Biz haqimizda</span>
+        </a>
+      </li>
+      <!-- End Biz haqimizda Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/users}">
+          <i class="bi bi-microsoft-teams"></i>
+          <span>Users</span>
+        </a>
+      </li>
+      <!-- End Users Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/ijaraberilgan}">
+          <i class="bi bi-microsoft-teams"></i>
+          <span>Ijaraga berilgan kitoblar</span>
+        </a>
+      </li>
+      <!-- End Users Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed " th:href="@{/parol}">
+          <i class="bi bi-key-fill "></i>
+          <span>Parol</span>
+        </a>
+      </li>
+    </ul>
+  </aside>
+  <!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <!-- Page Title -->
+    <div class="pagetitle">
+      <h1>Bo'lim joylash</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="">Home</a></li>
+          <li class="breadcrumb-item active">Bo'lim joylash</li>
+        </ol>
+      </nav>
+    </div>
+    <!-- End Page Title -->
+
+    <!-- =================== go jadval ==================== -->
+    <section id="jadval">
+      <div class="row">
+        <div class="headers text-center text-primary mb-2">
+          <h2>Bo'lim qo'shish</h2>
+        </div>
+        <div class="col-lg-12">
+          <button class="btn btn-primary my-3" data-bs-toggle="modal" data-bs-target="#insert">Bo'lim qo'shish <i class="bi bi-plus-circle"></i></button>
+          <div class="scrols" style="overflow-x: scroll; max-width: 100%; min-width: 300px;">
+            <table class="table table-bordered border-primary mr-5 text-center" id="table1"
+                   style="min-width: max-content;">
+              <thead>
+              <tr class="bg-primary text-white">
+                <th scope="col">ID</th>
+                <th scope="col">Bo'lim sarlavhasi</th>
+                <th scope="col" style="display: none">Bo'lim uchun text</th>
+                <th scope="col">Bo'lim muqovasi</th>
+                <th scope="col">Tahirlash</th>
+              </tr>
+
+              </thead>
+              <tbody id="tbody">
+                  <tr th:each = "bolim : ${BolimOne}">
+                    <td th:text = "${bolim.id}"></td>
+                    <td th:text = "${bolim.sarlavha}"></td>
+                    <td style=" overflow-x: scroll;  max-width: 80px; min-width: 50px; overflow-y: scroll; height: 50px; display: none">
+                      <p th:text = "${bolim.text}"></p>
+                    </td>
+                    <td style="width: 50px; height: 80px; ">
+                      <img th:src="@{${'/bolim/img/'+bolim.id}}" class="card-img-top" alt="rasm" width="100%" height="100%">
+                    </td>
+                    <td>
+                      <button class="btn btn-success" type="button" id="editBtn" data-bs-toggle="modal" data-bs-target="#edit">Tahirlash</button>
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- =================== end jadval ==================== -->
+
+    <!-- ======================= Qo'shish Modal ================== -->
+    <div class="modal fade " id="insert" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+         aria-labelledby="staticBackdropLabel" aria-hidden="true" style="box-shadow: 50px 50px 100px rgba(0 ,0,0,0);">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-primary">Bo'lim qo'shish</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="qoshishText">
+            <form id="insertForm">
+              <div class="row">
+                <div class="col-12">
+
+                  <div class="user my-3 text-left">
+                    <label for="bolimSarlavha" class="text-primary"> - Bo'limni tanglang</label>
+                    <div class="input-group">
+                      <select class="form-select" aria-label="Kategoriyani tanglang" id="bolimSarlavha" name="bolimSarlavha">
+                        <option selected>Bo'limni tanglang!</option>
+                        <option value="Abonement va foydalanuvchilarga xizmat ko‘rsatish xizmati">Abonement va foydalanuvchilarga xizmat ko‘rsatish xizmati</option>
+                        <option value="Axborot-bibliografiya xizmati">Axborot-bibliografiya xizmati</option>
+                        <option value="Fondlarni to‘ldirish, saqlash ishlov berish xizmati">Fondlarni to‘ldirish, saqlash ishlov berish xizmati</option>
+                        <option value="Axborot kommunikatsiya texnalogiyalari va raqamlashtirish xizmati">Axborot kommunikatsiya texnalogiyalari va raqamlashtirish xizmati</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="user my-3 text-left">
+                    <label class="text-primary">- Bo'lim muqovasi</label>
+                    <div class="input-group">
+                      <input class="form-control" type="file" id="bolimMuqova" name="bolimMuqova" required>
+                    </div>
+                  </div>
+
+                  <div class="user my-3 text-left">
+                    <label for="text" class="text-primary"> - Bo'lim uchun text</label>
+                    <div class="form-floating">
+                      <textarea class="form-control h-50" id="text" rows="10" cols="50" name="insertText" ></textarea >
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="close1" data-bs-dismiss="modal" >Yopish</button>
+            <button type="button" class="btn btn-primary" id="qoshBtn1">Qo`shish</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ======================= end Edit Modal ================== -->
+
+    <!-- ======================= Edit Modal ================== -->
+    <div class="modal fade " id="edit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+         aria-labelledby="staticBackdropLabel" aria-hidden="true" style="box-shadow: 50px 50px 100px rgba(0 ,0,0,0);">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-primary">Bo'lim tahirlash</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="editText1">
+            <form id="editForm">
+              <div class="row">
+                <div class="col-12">
+                  <input type="text" style="display: none" id="idEdit" name="idEdit">
+                  <div class="user my-3 text-left">
+                    <label for="editSarlavha" class="text-primary"> - Bo'limni tanglang</label>
+                    <div class="input-group">
+                      <select class="form-select" aria-label="Kategoriyani tanglang" id="editSarlavha" name="editSarlavha">
+                        <option selected>Bo'limni tanglang!</option>
+                        <option value="Abonement va foydalanuvchilarga xizmat ko‘rsatish xizmati">Abonement va foydalanuvchilarga xizmat ko‘rsatish xizmati</option>
+                        <option value="Axborot-bibliografiya xizmati">Axborot-bibliografiya xizmati</option>
+                        <option value="Fondlarni to‘ldirish, saqlash ishlov berish xizmati">Fondlarni to‘ldirish, saqlash ishlov berish xizmati</option>
+                        <option value="Axborot kommunikatsiya texnalogiyalari va raqamlashtirish xizmati">Axborot kommunikatsiya texnalogiyalari va raqamlashtirish xizmati</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="user my-3 text-left">
+                    <label class="text-primary">- Bo'lim muqovasi</label>
+                    <div class="input-group">
+                      <input class="form-control" type="file" id="editMuqova" name="editMuqova" required>
+                    </div>
+                  </div>
+
+                  <div class="user my-3 text-left">
+                    <label for="editText" class="text-primary"> - Bo'lim uchun text</label>
+                    <div class="form-floating">
+                      <textarea class="form-control h-50" id="editText" rows="10" cols="50" name="editText"></textarea >
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="close2" data-bs-dismiss="modal" >Yopish</button>
+            <button type="button" class="btn btn-primary" id="qoshBtn2">Tahirlash</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ======================= end Edit Modal ================== -->
+  </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; <strong><span>mirzacholakm.uz 2022</span></strong>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script th:src="@{/js/jquery.min.js}"></script>
+
+  <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+
+  <script th:src="@{/js/test.min.js}"></script>
+
+  <script th:src="@{/js/demo.js}"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <!-- Vendor JS Files -->
+  <script th:src="@{/assets1/vendor/apexcharts/apexcharts.min.js}"></script>
+  <script th:src="@{/assets1/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+  <script th:src="@{/assets1/vendor/chart.js/chart.min.js}"></script>
+  <script th:src="@{/assets1/vendor/echarts/echarts.min.js}"></script>
+  <script th:src="@{/assets1/vendor/quill/quill.min.js}"></script>
+  <script th:src="@{/assets1/vendor/simple-datatables/simple-datatables.js}"></script>
+  <script th:src="@{/assets1/vendor/tinymce/tinymce.min.js}"></script>
+  <script th:src="@{/assets1/vendor/php-email-form/validate.js}"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script th:src="@{/assets1/js/main.js}"></script>
+  <script type="text/javascript">
+
+    var baseUrl = window.location.origin;
+
+    //  qo'shish bolim;
+
+    $(document).ready(function (){
+      $(document).on("click", "#qoshBtn1", function (){
+
+        var text = $("#text").val();
+        var muqova = $("#bolimMuqova").val();
+        var sarlavha = $("#bolimSarlavha").val();
+
+        if (text!=="" && muqova!=="" && sarlavha!=="Bo'limni tanglang!"){
+
+          var from=$('#insertForm')[0];
+          var data1=new FormData(from);
+
+          $.ajax({
+            url:baseUrl+"/api/bolim",
+            type: 'POST',
+            enctype: 'multipart/form-data',
+            data: data1,
+            processData: false,
+            contentType: false,
+            cache: false,
+            success: function (data , status , info){
+              if(info.status=="200"){
+                swal({
+                  title: "Success",
+                  text: "Bo'lim muvaffaqiyatli qo'shildi!",
+                  icon: "success",
+                  buttons: true,
+                  dangerMode: true,
+                })
+                        .then((willDelete) => {
+                          if (willDelete) {
+                            $("#insert").modal('hide')
+                            window.location = "/bolim/one";
+                          }
+                        });
+              }
+              else if(info.status=="208"){
+                swal({
+                  title: "Warning",
+                  text: "Bunday bo'lim mavjud!",
+                  icon: "error",
+                  buttons: true,
+                  dangerMode: true,
+                });
+              }
+            },
+            error: function (error){
+              console.log(error);
+              swal({
+                title: "Error"+error,
+                text: "Baza bilan bog'lanishda xatolik!",
+                icon: "warning",
+                button: "OK",
+              });
+
+            }
+          })
+
+        }else{
+          swal({
+            title: "Maydonlarni to'ldiring!",
+            icon: "warning",
+            button: "OK",
+          });
+        }
+
+      })
+    })
+
+    $(document).ready(function (){
+      $.ajax({
+        url: baseUrl + "/api/select/bolim",
+        type: 'GET',
+        dataType:"json",
+        success:function (data){
+          var soni = data;
+          if (soni===4){
+            document.getElementById("qoshBtn1").style.display = "none";
+          }
+        },
+        error: function (error){
+          alert("hatolik = "+error);
+        }
+      })
+    });
+
+    // end bo'lim;
+
+
+    // Tahirlash
+
+    $("#table1").on("click","tbody tr #editBtn", function (e){
+      $tr=$(this).closest('tr');
+      var editObject = $tr.children("td").map(function (){
+        return $(this).text();
+      }).get();
+      if (editObject[0]!=null){
+        $('#idEdit').val(editObject[0]);
+        $('#editSarlavha').val(editObject[1]);
+        $('#editText').val(editObject[2]);
+      }
+    });
+
+
+    $(document).ready(function () {
+      $(document).on("click","#qoshBtn2", function (){
+
+        var text = $("#editText").val();
+        var muqova = $("#bolimMuqova").val();
+        var sarlavha = $("#editSarlavha").val();
+
+        if (text!=="" && sarlavha!=="Bo'limni tanglang!"){
+
+
+
+          var from=$('#editForm')[0];
+          var data2=new FormData(from);
+
+          $.ajax({
+            url:baseUrl+"/api/edit/bolim",
+            type: 'PUT',
+            enctype: 'multipart/form-data',
+            data: data2,
+            processData: false,
+            contentType: false,
+            cache: false,
+            success: function (data , status , info){
+              if (info.status=="200"){
+                swal({
+                  title: "Success full",
+                  text: "Bo'lim muvafaqiyatli tahirlandi!",
+                  icon: "success",
+                  buttons: true,
+                  dangerMode: true,
+                })
+                        .then((willDelete) => {
+                          if (willDelete) {
+                            $("#edit").modal('hide')
+                            window.location = "/bolim/one";
+                          }
+                        });
+              }
+              else if (info.status=="208"){
+                swal({
+                  title: "Xatolik!",
+                  text: "Malimot tahirlanmadi!",
+                  icon: "error",
+                  button: "Yopish",
+                });
+              }
+            },
+            error: function (error){
+              swal({
+                title: "Error! "+error,
+                text: "Malimot tahirlanmadi!",
+                icon: "error",
+                button: "Yopish",
+              });
+            }
+          })
+        }else {
+          swal({
+            title: "Xatolik!",
+            text: "Maydonlarni to'ldiring!",
+            icon: "warning",
+            button: "Yopish",
+          });
+        }
+      })
+    })
+
+    //
+
+
+  </script>
+</body>
+
+</html>

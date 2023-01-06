@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/c/CodingLabYT-->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+    <title>Mirzacho'l Axborot-kutubxona markazi | Ro'yhatan o'tish</title>
+  <link rel="stylesheet" th:href="@{/assets1/css/loginStyle.css}">
+  <!-- Fontawesome CDN Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+<!--  <link rel="stylesheet" th:href="@{/css/all.min.css}">-->
+
+<!--  <link rel="stylesheet" th:href="@{/css/test.min.css}">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="container">
+
+      <label  id="KitobId" style="display: none"  th:text = "${KitobId}"></label>
+    <div class="forms">
+      <div class="form-content">
+        <div class="login-form">
+          <div class="title">Ro'yhatan o'tish</div>
+          <form id="formDate">
+            <div class="input-boxes text-center">
+
+              <div class="input-box">
+<!--                <i class="fas fa-envelope"></i>-->
+                <input type="text" placeholder="Ism va Familyangizni kiriting!" id="ismandfamilya" name="ismandfamilya" required>
+              </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Yoshingizni kiriting!" id="yosh" name="yosh" required>
+                </div>
+
+              <div class="input-box">
+<!--                <i class="fas fa-envelope"></i>-->
+                <input type="text" placeholder="Pasport Seriya va Raqamini kiriting" id="seriya" name="seriya" required>
+              </div>
+
+              <div class="input-box">
+<!--                <i class="fas fa-lock"></i>-->
+                <input type="email" placeholder="Emailni kiriting!" id="email" name="email" required>
+              </div>
+
+              <div class="input-box">
+<!--                <i class="fas fa-lock"></i>-->
+                <input type="number" placeholder="Telefon nomerni kiriting! (+998 xx xxx xx-xx)" id="number" name="number" required>
+              </div>
+
+              <div class="input-box">
+<!--                <i class="fas fa-lock"></i>-->
+                <input type="password" placeholder="Parol kiriting!" id="parol" name="parol" required>
+              </div>
+
+              <div class="input-box">
+<!--                <i class="fas fa-lock"></i>-->
+                <input type="password" placeholder="Parolni tasdiqlang!" id="tasparol" name="tasparol" required>
+              </div>
+
+              <div class="button input-box text-center">
+                <button type="button" id="btn" class="btn btn-primary w-75 text-center"
+                style="width: 100%; height: 80%; background: #0c84ff; color: white; border: none; padding: 2px 20px; font-size: 18px; border-radius: 5px;cursor: pointer; "
+                >Ro'yhatan o'tish</button>
+              </div>
+
+              <div>
+                <p>Ro'yhatan o'tganmisiz?</p>
+                <a th:href="@{${'/kirish/'+ KitobId}}"  style="color: #106eea; text-decoration: none;"> Tizimga kirish</a>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script th:src="@{/js/jquery.min.js}"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<!--<script th:src="@{/js/bootstrap.bundle.min.js}"></script>-->
+
+<!--<script th:src="@{/js/test.min.js}"></script>-->
+
+<!--<script th:src="@{/js/demo.js}"></script>-->
+<!--<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>-->
+<!--<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>-->
+
+<script type="text/javascript">
+  var baseUrl = window.location.origin;
+
+  $(document).ready(function (){
+    $(document).on("click","#btn",function () {
+
+      var ismvsfam = $('#ismandfamilya').val();
+      var seriya = $('#seriya').val();
+      var yosh = $('#yosh').val();
+      var email = $('#email').val();
+      var telefon = $('#number').val();
+      var parol = $('#parol').val();
+      var tasparol = $('#tasparol').val();
+      var id = $('#KitobId').text();
+
+      if (ismvsfam !== "" && yosh.length>0 && seriya !== "" && email !== "" && telefon !== "" && parol !== "" && tasparol !== "") {
+        if (ismvsfam.length >= 5) {
+
+            if (yosh.length>0){
+                var boshi = seriya.substring(0, 2);
+                var oxiri = seriya.substring(2);
+                if (seriya.length == 9 && boshi.length == 2 && oxiri.length == 7) {
+
+                    var count=0;
+                    for (var i = 0; i<=email.length; i++){
+                        if (email[i] == "@"){
+                            count++;
+                            break;
+                        }
+                    }
+
+
+                    if (count>0) {
+
+                        var bosh = telefon.substring(0, 3);
+
+
+                        if (telefon.length === 12 && bosh == "998") {
+
+                            if (parol.length>=8){
+
+                                if (tasparol===parol){
+
+                                    var from = $('#formDate')[0];
+                                    var data1 = new FormData(from);
+
+                                    $.ajax({
+                                        url: baseUrl + "/user/register",
+                                        type: 'POST',
+                                        enctype: 'multipart/form-data',
+                                        data: data1,
+                                        processData: false,
+                                        contentType: false,
+                                        cache: false,
+                                        success: function (data, status, info) {
+                                            if (info.status == "200") {
+                                                swal({
+                                                    title: "Success",
+                                                    text: "Ro'yhatan muvaffaqiyatli o'tingiz!",
+                                                    icon: "success",
+                                                    buttons: true,
+                                                    dangerMode: true,
+                                                })
+                                                    .then((willDelete) => {
+                                                        if (willDelete) {
+                                                            // clearBook();
+                                                            window.location = "/kirish/" + id;
+                                                        }
+                                                    });
+                                            } else if (info.status == "208") {
+                                                swal({
+                                                    title: "Warning",
+                                                    text: "User tizimda mavjud!",
+                                                    icon: "error",
+                                                    buttons: true,
+                                                    dangerMode: true,
+                                                });
+                                            }
+                                        },
+                                        error: function (error) {
+                                            alert("error " + error);
+                                            console.log(error);
+                                        }
+                                    })
+
+                                }
+                                else{
+                                    swal({
+                                        title: "Warning",
+                                        text: "Parolar mos emas!",
+                                        icon: "warning",
+                                        buttons: true,
+                                        dangerMode: true,
+                                    });
+                                }
+
+                            }else{
+                                swal({
+                                    title: "Warning",
+                                    text: "Parol 8 ta belgidan ko'p bo'lishi kerak!",
+                                    icon: "warning",
+                                    buttons: true,
+                                    dangerMode: true,
+                                });
+                            }
+
+
+                        }
+                        else{
+                            swal({
+                                title: "Warning",
+                                text: "Telefon no'mer xato kiritildi!",
+                                icon: "warning",
+                                buttons: true,
+                                dangerMode: true,
+                            });
+                        }
+
+                    }else{
+                        swal({
+                            title: "Warning",
+                            text: "Email to'g'ri kiritilmadi!",
+                            icon: "warning",
+                            buttons: true,
+                            dangerMode: true,
+                        });
+                    }
+
+                } else {
+                    swal({
+                        title: "Warning",
+                        text: "Paspost Seriya maydonchasida xatolik!",
+                        icon: "warning",
+                        buttons: true,
+                        dangerMode: true,
+                    });
+                }
+
+            }else{
+                swal({
+                    title: "Diqat!",
+                    text: "Yosh maydonchasida xatolik!",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                });
+            }
+
+
+
+        } else {
+          swal({
+            title: "Warning",
+            text: "Ism va Familya maydonchasida xatolik!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          });
+        }
+
+
+      }else{
+        swal({
+          title: "Warning",
+          text: "Maydonlarni to'ldiring!",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
+        });
+      }
+
+    })
+  })
+
+
+</script>
+</html>

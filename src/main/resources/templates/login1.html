@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/c/CodingLabYT-->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mirzacho'l Axborot-kutubxona markazi | Admin login</title>
+  <link rel="stylesheet" th:href="@{/assets1/css/loginStyle.css}">
+  <!-- Fontawesome CDN Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+<!--  <link rel="stylesheet" th:href="@{/css/all.min.css}">-->
+
+<!--  <link rel="stylesheet" th:href="@{/css/test.min.css}">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="container">
+
+<!--    <input type="checkbox" id="flip">-->
+
+    <div class="forms">
+      <div class="form-content">
+        <div class="login-form">
+          <div class="title">Tizimga kirish</div>
+          <form id="formDate">
+            <div class="input-boxes text-center">
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="Enter your username" id="username" name="username" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Enter your password" id="password" name="password" required>
+              </div>
+              <div class="button input-box text-center">
+                <button type="button" id="btn" class="btn btn-primary w-75 text-center"
+                style="width: 100%; height: 80%; background: #0c84ff; color: white; border: none; padding: 2px 20px; font-size: 18px; border-radius: 5px;cursor: pointer; "
+                >Tizimga kirish</button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script th:src="@{/js/jquery.min.js}"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<!--<script th:src="@{/js/bootstrap.bundle.min.js}"></script>-->
+
+<!--<script th:src="@{/js/test.min.js}"></script>-->
+
+<!--<script th:src="@{/js/demo.js}"></script>-->
+<!--<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>-->
+<!--<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>-->
+
+<script type="text/javascript">
+  var baseUrl = window.location.origin;
+
+  $(document).ready(function (){
+    $(document).on("click","#btn",function (){
+      var username = $('#username').val();
+      var password = $('#password').val();
+
+      if (username!="" && password!=""){
+
+
+
+        if (password.length>=8){
+
+          var from=$('#formDate')[0];
+          var data08=new FormData(from);
+          $.ajax({
+            url:baseUrl+"/login/kirish",
+            type: 'POST',
+            enctype: 'multipart/form-data',
+            data: data08,
+            processData: false,
+            contentType: false,
+            cache: false,
+            success: function (data , status , info){
+              if(info.status=="200"){
+                swal({
+                  title: "Success Full",
+                  text: "Tizimga muvaffaqiyatli kirildi!",
+                  icon: "success",
+                  buttons: true,
+                  dangerMode: true,
+                })
+                        .then((willDelete) => {
+                          if (willDelete) {
+                            window.location = "/admin";
+                            $('#username').val("");
+                            $('#password').val("");
+                          }
+                        });
+              }
+              else if(info.status=="208"){
+                swal({
+                  title: "Warning!",
+                  text: data,
+                  icon: "warning",
+                  buttons: true,
+                  dangerMode: true,
+                });
+                $('#username').val("");
+                $('#password').val("");
+              }
+            },
+            error: function (error){
+              swal({
+                title: "error!",
+                text: "Malumotlar xato yoki baza bilan bog'lanishda xatolik",
+                icon: "error",
+                buttons: true,
+                dangerMode: true,
+              });
+            }
+          })
+
+        }else{
+          swal({
+            title: "Warning",
+            text: "Parol katta harf va raqamlardan tashkil topishi va 8 ta belgi yoki ko'p bo'lishi kerak!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          });
+        }
+      }else{
+        swal({
+          title: "Warning",
+          text: "Maydonlarni to'ldiring!",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
+        });
+      }
+
+    })
+  })
+
+
+</script>
+</html>

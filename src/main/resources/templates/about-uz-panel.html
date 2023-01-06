@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Mirzacho'l Axborot-kutubxona markazi | Biz haqimizda</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+  <link rel="stylesheet" th:href="@{/css/all.min.css}">
+
+  <link rel="stylesheet" th:href="@{/css/test.min.css}">
+  <!-- Favicons -->
+  <link href="assets1/img/favicon.png" rel="icon">
+  <link href="assets1/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets1/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets1/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets1/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets1/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets1/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets1/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets1/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets1/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a th:href="@{/admin}" class="logo d-flex align-items-center">
+        <!--        <img src="assets1/img/logo.png" alt=""> -->
+        <span class="d-none d-lg-block">mirzacholakm.uz</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar text-center text-primary">
+      <h3>Biz haqimizda oynasi</h3>
+    </div><!-- End Search Bar -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed " th:href="@{/admin}">-->
+<!--          <i class="bi bi-grid"></i>-->
+<!--          <span>Boshqaruv paneli</span>-->
+<!--        </a>-->
+<!--      </li>-->
+      <!-- End Dashboard Nav -->
+
+      <li class="nav-heading">Pages</li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed " th:href="@{/addbook}">
+          <i class="bi bi-bookmarks-fill "></i>
+          <span>Elektron kitoblar</span>
+        </a>
+      </li>
+      <!-- End Profile Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/ijara/books}">
+          <i class="bi bi-calendar-date-fill"></i>
+          <span>Ijara kitoblar</span>
+        </a>
+      </li>
+      <!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/qr/books}">
+          <i class="bi bi-qr-code-scan"></i>
+          <span>QR kodli kitoblar</span>
+        </a>
+      </li>
+      <!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/addNew}">
+          <i class="bi bi-globe2"></i>
+          <span>Yangiliklar</span>
+        </a>
+      </li>
+
+      <!-- End Contact Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/bolim/one}">
+          <i class="bi bi-journal-text"></i>
+          <span>Bo'limlar</span>
+        </a>
+      </li>
+
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed " data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">-->
+<!--          <i class="bi bi-journal-text "></i><span>Bo'limlar</span><i class="bi bi-chevron-down ms-auto"></i>-->
+<!--        </a>-->
+<!--        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">-->
+<!--          <li>-->
+<!--            <a th:href="@{/bolim/one}">-->
+<!--              <i class="bi bi-circle"></i><span>Abonement va foydalanuvchilarga xizmat ko‘rsatish xizmati</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a th:href="@{/bolim/two}">-->
+<!--              <i class="bi bi-circle"></i><span>Axborot-bibliografiya xizmati</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a th:href="@{/bolim/three}">-->
+<!--              <i class="bi bi-circle"></i><span>Fondlarni to‘ldirish, saqlash ishlov berish xizmati</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a th:href="@{/bolim/four}">-->
+<!--              <i class="bi bi-circle"></i><span>Axborot kommunikatsiya texnalogiyalari va raqamlashtirish xizmati</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </li>-->
+      <!-- End Forms Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed " th:href="@{/tadbirlar}">
+          <i class="bi bi-calendar-event-fill "></i>
+          <span>Tadbirlar</span>
+        </a>
+      </li>
+      <!-- End Contact Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/contact-us-panel}">
+          <i class="bi bi-geo-alt"></i>
+          <span>Manzil</span>
+        </a>
+      </li><!-- End Biz bilan bog'lanish Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed bg-primary text-white" th:href="@{/about-uz-panel}">
+          <i class="bi bi-microsoft-teams text-white"></i>
+          <span>Biz haqimizda</span>
+        </a>
+      </li>
+      <!-- End Biz haqimizda Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/users}">
+          <i class="bi bi-microsoft-teams"></i>
+          <span>Users</span>
+        </a>
+      </li>
+      <!-- End Users Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/ijaraberilgan}">
+          <i class="bi bi-microsoft-teams"></i>
+          <span>Ijaraga berilgan kitoblar</span>
+        </a>
+      </li>
+      <!-- End Users Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed " th:href="@{/parol}">
+          <i class="bi bi-key-fill "></i>
+          <span>Parol</span>
+        </a>
+      </li>
+    </ul>
+  </aside>
+  <!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Biz haqimizda </h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="">Home</a></li>
+          <li class="breadcrumb-item active">Biz haqimzda</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- =================== go jadval ==================== -->
+
+    <!-- <section id="jadval">
+      <div class="row">
+        <div class="headers text-center text-primary mb-2">
+          <h2>Yangilik qo'shish</h2>
+        </div>
+        <div class="col-lg-12">
+          <button class="btn btn-primary my-3" data-bs-toggle="modal" data-bs-target="#insert">Yangilik
+            qo'shish</button>
+          <div class="scrols" style="overflow-x: scroll; max-width: 100%; min-width: 300px;">
+            <table class="table table-bordered border-primary mr-5 text-center" id="table1"
+              style="min-width: max-content;">
+              <thead>
+                <tr class="bg-primary text-white">
+                  <th scope="col">#</th>
+                  <th scope="col">Yangilik nomi</th>
+                  <th scope="col">Yangilik vaqti</th>
+                  <th scope="col">Yangilik muqovasi</th>
+                  <th scope="col">Yangilik izoh</th>
+                  <th scope="col">Tahirlash / O'chirish</th>
+                </tr>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Zakovat</td>
+                  <td>14/09/2022</td>
+                  <td>Rasm</td>
+                  <td>Lorem ipsum dolor sit, amet consectetur.</td>
+                  <td>
+                    <div class="btn btn-success px-3 mx-3" data-bs-toggle="modal" data-bs-target="#insert"> <i
+                        class="bi bi-pencil-fill"></i> Tahirlash</div>
+                    <div class="btn btn-danger px-3 mx-3" data-bs-toggle="modal" data-bs-target="#delete"><i
+                        class="bi bi-trash3-fill mr-2"></i> O'chirish</div>
+                  </td>
+                </tr>
+              </thead>
+              <tbody id="tbody">
+
+
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+    </section> -->
+
+    <!-- =================== end jadval ==================== -->
+
+    <hr class="my-5">
+
+    <!-- ======================= Qo'shish Modal ================== -->
+
+    <div class="modal fade " id="insert" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true" style="box-shadow: 50px 50px 100px rgba(0 ,0,0,0);">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-primary">Malumot qo'shish</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="qoshishText">
+            <form id="formId">
+              <div class="row">
+<!--                <input type="text" id="editId" name="editId" style="display: none">-->
+                <div class="row">
+                  <div class="col-lg-6 user my-3 text-left">
+                    <label class="text-primary">- Mavzu!</label>
+                    <div class="input-group">
+                      <input class="form-control" type="text" id="mavzu" name="mavzu" placeholder="Mavzu nomini kiriting!"
+                        required>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 user my-3 text-left">
+                    <label class="text-primary">- Muqova!</label>
+                    <div class="input-group">
+                      <input class="form-control" type="file" id="muqova" name="muqova"
+                        placeholder="Malumotni kiriting!" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+
+                  <div class="user my-3 text-left">
+                    <label for="izoh" class="text-primary"> - Izoh</label>
+                    <div class="form-floating">
+                      <textarea class="form-control" rows="10" style="height: 100px" placeholder="Leave a comment here" name="izoh" id="izoh"></textarea >
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </form>
+            <small class="ml-3 text-danger text-left" id="insertError1"></small>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="close1" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="qoshBtn">Qo`shish</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================= end Qo'shish Modal ================== -->
+
+    <!-- ======================= Qo'shish Modal ================== -->
+
+    <div class="modal fade " id="editModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+         aria-labelledby="staticBackdropLabel" aria-hidden="true" style="box-shadow: 50px 50px 100px rgba(0 ,0,0,0);">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-primary">Malumot tahirlash</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="editText">
+            <form id="editForm">
+              <div class="row">
+                <input type="text" id="editId" name="editId" style="display: none">
+                <div class="row">
+                  <div class="col-lg-6 user my-3 text-left">
+                    <label class="text-primary">- Mavzu!</label>
+                    <div class="input-group">
+                      <input class="form-control" type="text" id="editMavzu" name="editMavzu" placeholder="Mavzu nomini kiriting!"
+                             required>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 user my-3 text-left">
+                    <label class="text-primary">- Muqova!</label>
+                    <div class="input-group">
+                      <input class="form-control" type="file" id="editMuqova" name="editMuqova"
+                             placeholder="Malumotni kiriting!" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+
+                  <div class="user my-3 text-left">
+                    <label for="izoh" class="text-primary"> - Izoh</label>
+                    <div class="form-floating">
+                      <textarea class="form-control" rows="10" style="height: 300px" placeholder="Leave a comment here" name="editIzoh" id="editIzoh"></textarea >
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </form>
+            <small class="ml-3 text-danger text-left" id="insertError"></small>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="edit" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="editBtn">Tahirlash</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================= end Qo'shish Modal ================== -->
+
+
+    <!-- delete modal -->
+<div class="modal fade" id="delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Kitobni o'chirish</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger">O'chirish</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- =================== go jadval ==================== -->
+
+    <section id="jadval">
+        <div class="row">
+          <div class="headers text-center text-primary mb-2">
+            <h2>Biz haqimizda</h2>
+          </div>
+          <div class="col-lg-12">
+            <button class="btn btn-primary my-3" id="btnQoshish" data-bs-toggle="modal" data-bs-target="#insert">Malumot qo'shish</button>
+            <div class="scrols" style="overflow-x: scroll; max-width: 100%; min-width: 300px;">
+              <table class="table table-bordered border-primary mr-5 text-center" id="table1"
+                style="min-width: max-content;">
+                <thead>
+                  <tr class="bg-primary text-white">
+                    <th scope="col">#</th>
+                    <th scope="col">Mavzu</th>
+                    <th scope="col" style="display: none">Malumot</th>
+                    <th scope="col">Muqova</th>
+                    <th scope="col">Tahirlash</th>
+                  </tr>
+
+                </thead>
+                <tbody id="tbody">
+                <input type="text" name="size" style="display: none"  id="sizeAbout" th:value = "${SizeAbout}">
+                  <tr th:each = "about : ${AboutUs}">
+                    <td scope="row" th:text = "${about.id}"></td>
+                    <td th:text = "${about.mavzu}"></td>
+                    <td style="overflow-x: scroll;  max-width: 200px; min-width: 70px; overflow-y: scroll; max-height: 100px;display: none " th:text = "${about.malumot}"> </td>
+                    <td style="width: 50px; height: 80px">
+                      <img th:src="@{${'/image/about/'+about.id}}" class="card-img-top" alt="rasm" width="100%" height="100%"> </td>
+                    <td>
+                      <button class="btn btn-success px-3 mx-3" id="editButton1" data-bs-toggle="modal" data-bs-target="#editModal"><i
+                              class="bi bi-pensil-fill mr-2"></i> Tahirlash
+                      </button>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+
+      </section>
+  
+      <!-- =================== end jadval ==================== -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; <strong><span>mirzacholakm.uz 2022</span></strong>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+  <script th:src="@{/js/jquery.min.js}"></script>
+  <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+  <script th:src="@{/js/test.min.js}"></script>
+
+  <script th:src="@{/js/demo.js}"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+  <!-- Vendor JS Files -->
+
+  <script src="assets1/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets1/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets1/vendor/chart.js/chart.min.js"></script>
+  <script src="assets1/vendor/echarts/echarts.min.js"></script>
+  <script src="assets1/vendor/quill/quill.min.js"></script>
+  <script src="assets1/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets1/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets1/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets1/js/main.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <script type="text/javascript">
+
+    var baseUrl = window.location.origin;
+
+    var sizeaboutus = $('#sizeAbout').val();
+    if (sizeaboutus>=1){
+      document.getElementById("btnQoshish").style.display = "none";
+    }
+    var dataDelete
+    $("#table1").on("click","tbody tr #deleteButton", function (e){
+      $tr=$(this).closest('tr');
+      dataDelete = $tr.children("td").map(function (){
+        return $(this).text();
+      }).get();
+    });
+
+    $("#table1").on("click","tbody tr #editButton1", function (e){
+      $tr=$(this).closest('tr');
+      var editObject = $tr.children("td").map(function (){
+        return $(this).text();
+      }).get();
+
+      if (editObject[0]!=null){
+        $('#editId').val(editObject[0])
+        $('#editMavzu').val(editObject[1]);
+        $('#editIzoh').val(editObject[2]);
+      }
+    });
+
+    $(document).ready(function (){
+      $(document).on("click","#qoshBtn",function (){
+        var mavzu = $('#mavzu').val();
+        var muqova = $('#muqova').val();
+        var izoh = $('#izoh').val();
+
+        var from=$('#formId')[0];
+        var data1=new FormData(from);
+
+        if (mavzu!=="" && muqova!=="" && izoh!==""){
+          $.ajax({
+            url:baseUrl+"/api/aboutus",
+            type: 'POST',
+            enctype: 'multipart/form-data',
+            data: data1,
+            processData: false,
+            contentType: false,
+            cache: false,
+            success: function (data , status , info){
+              if(info.status=="200"){
+                swal({
+                  title: "Success Full",
+                  text: "Muvaffaqiyatli joylandi!",
+                  icon: "success",
+                  buttons: true,
+                  dangerMode: true,
+                })
+                        .then((willDelete) => {
+                          if (willDelete) {
+                            clearBook();
+                            $("#insert").modal('hide')
+                            window.location = "/about-uz-panel";
+                          }
+                        });
+              }
+              else if(info.status=="208"){
+                swal({
+                  title: "Warning",
+                  text: "Bunday mavzu mavjud!",
+                  icon: "error",
+                  buttons: true,
+                  dangerMode: true,
+                });
+              }
+            },
+            error: function (error){
+              swal({
+                title: "Error "+error,
+                text: "Xatolik!",
+                icon: "error",
+                buttons: true
+              });
+            }
+          })
+        }else{
+          swal({
+            title: "Warning",
+            text: "Maydonlarni to'ldiring!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          });
+        }
+
+      })
+    })
+
+    $(document).ready(function () {
+      $(document).on("click","#editBtn", function (){
+
+        var mavzu = $('#editMavzu').val();
+        var izoh = $('#editIzoh').val();
+
+        if (mavzu!=="" && izoh!==""){
+
+          var from=$('#editForm')[0];
+          var data2=new FormData(from);
+
+          $.ajax({
+            url:baseUrl+"/api/aboutus/edit",
+            type: 'PUT',
+            enctype: 'multipart/form-data',
+            data: data2,
+            processData: false,
+            contentType: false,
+            cache: false,
+            success: function (data , status , info){
+              if (info.status=="200"){
+                swal({
+                  title: "Muvafaqiyatli tahirlandi!",
+                  text: "Success Full!",
+                  icon: "success",
+                  buttons: true,
+                  dangerMode: true,
+                })
+                        .then((willDelete) => {
+                          if (willDelete) {
+                            clearBookedit();
+                            window.location="/about-uz-panel";
+                          }
+                        });
+              }else if (info.status=="208"){
+                swal({
+                  title: "Xatolik!",
+                  text: "Malimot tahirlanmadi!",
+                  icon: "error",
+                  button: "Yopish",
+                });
+              }
+            },
+            error: function (error){
+              swal({
+                title: "Error! "+error,
+                text: "Malimot tahirlanmadi!",
+                icon: "error",
+                button: "Yopish",
+              });
+            }
+          })
+        }else {
+
+          swal({
+            title: "Xatolik!",
+            text: "Maydonlarni to'ldiring!",
+            icon: "warning",
+            button: "Yopish",
+          });
+
+        }
+      })
+    })
+
+    $(document).ready(function (){
+      $(document).on("click","#deleteButton", function (){
+
+        swal({
+          title: "Delete",
+          text: "Malumotlarni o'chirmoqchimisiz!",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
+        })
+                .then((willDelete) => {
+                  if (willDelete) {
+                    $.ajax({
+                      url: baseUrl+"/api/aboutus/"+dataDelete[0]+"",
+                      type: "DELETE",
+                      success: function (){
+                        window.location = "/about-uz-panel";
+                      },
+                      error: function (error){
+                        swal({
+                          title: "Error! "+error,
+                          text: "Malimot tahirlanmadi!",
+                          icon: "error",
+                          button: "Yopish",
+                        });
+                      }
+                    })
+                  }
+                });
+      })
+    })
+
+    // $(document).ready(function (){
+    //   getkitob();
+    // })
+
+    function getkitob(){
+      $.ajax({
+        url: baseUrl + "/api/select/about",
+        type: 'GET',
+        dataType:"json",
+        success:function (data){
+          var soni = data;
+          if (soni===1){
+            document.getElementById("btnQoshish").style.display = "none";
+          }
+        },
+        error: function (error){
+          alert("hatolik = "+error);
+        }
+      })
+    }
+
+    function clearBook(){
+      $('#mavzu').val("");
+      $('#izoh').val("");
+    }
+
+    function clearBookedit(){
+      $('#editIzoh').val("");
+      $('#editMavzu').val("");
+    }
+
+  </script>
+
+</body>
+
+</html>

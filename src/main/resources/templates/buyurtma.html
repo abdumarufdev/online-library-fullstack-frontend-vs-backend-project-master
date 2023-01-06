@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Books.uz</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <!-- ICONS -->
+  <!-- <link href="assets/img/favicon.png" rel="icon"> -->
+  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  <link rel="stylesheet" th:href="@{/assets/css/ab.css}">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+  <link rel="stylesheet" th:href="@{/css/all.min.css}">
+
+  <link rel="stylesheet" th:href="@{/css/test.min.css}">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link th:href="@{/assets/css/style2.css}" rel="stylesheet">
+
+  <!-- =======================================================
+
+  ======================================================== -->
+</head>
+<style  >
+  .card{
+    border: 1px solid #dedede;
+  }
+  .card:hover{
+    border: 2px solid #00720c;
+    transition: .3s;
+  }
+</style>
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a th:href="@{/home}">Books<span>.uz</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a> -->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" th:href="@{/home}">Bosh sahifa</a></li>
+          <li class="dropdown scrollto active"><a th:href="@{/home}"><span>Kitoblar</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="scrollto" th:href="@{/books}">Jahon adabiyoti</a></li>
+              <li><a class="scrollto" th:href="@{/books}">Badiy adabiyotlar</a></li>
+              <li><a class="scrollto" th:href="@{/books}">Ilmiy adabiyotlar</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" th:href="@{/news}" href="news.html">Yangiliklar</a></li>
+          <li><a class="nav-link scrollto " th:href="@{/about}" href="about.html">Biz haqimizda</a></li>
+<!--          <li><a class="nav-link scrollto " href="#" href="contact.html">Biz bilan bog'lanish</a></li>-->
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <main id="main">
+    <!-- ======= Buyurtma berish adabiyoti Section ======= -->
+    <section id="buyurtma" class="about section-bg" style="background: #fcfffc">
+      <div class="container" data-aos="fade-up">
+        <!-- <header class="section-header">
+          <h2>Jahon adabiyoti</h2>
+        </header> -->
+        <div class="section-title">
+
+          <div class="row">
+            <div class="col-lg-6 col-md-12  " data-aos="fade-right" data-aos-delay="50">
+              <h1 class="logo" style="text-align: left; font-size: 35px;"><a href="#" style="color:rgb(0,0,0);">Buyurtma<span style="color: #0d6efd;">
+                    berish</span></a></h1>
+            </div>
+
+            <div class="barcha-books col-lg-6 col-md-12  mt-2 " data-aos="fade-up" data-aos-delay="50" style="text-align: right; font-size: 10px">
+              <a th:href="@{/books}" style="font-size: 25px; align-items: center; cursor: pointer;">
+                Barcha kitoblar
+                <i class="bi bi-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="50">
+          <div class="slide-container swiper">
+            <div class="slide-content">
+              <div class="card-wrapper swiper-wrapper">
+
+                <!-- Card -->
+
+                <div class="card swiper-slide py-4 px-4"   th:each = "kitob : ${JahonAdabiyot}"  >
+
+<!--                  <a th:href="@{${'/dowlond/'+ kitob.id}}">-->
+                    <div class="card-img " style="width: 100%; height: 280px;">
+                      <img  th:src="@{${'/image/display/'+ kitob.id}}"  class="card-img-top" alt="rasm"  height="280px">
+                    </div>
+                    <div class="card-body">
+                      <div class="text-secondary text-center">
+                        <h6 class="h4 card-title" style="font-size: 18px" th:text = "${kitob.nomi}"></h6>
+                        <p class="card-text" style="font-size: 14px" th:text = "${kitob.muallif}"></p>
+                        <a href="" class="btn mb-3" id="b-b">Buyurtma berish</a>
+                      </div>
+                      <!--                      <a th:href="@{/books}" class="btn btn-primary">Barcha  kitoblar <i class="bi bi-arrow-right-circle"></i></a>-->
+                    </div>
+<!--                  </a>-->
+
+                </div>
+
+                <!-- end Card -->
+
+              </div>
+            </div>
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Buyurtma berish adabiyoti Section -->
+  </main>
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Books<span>.uz</span></h3>
+            <p>
+              O'zbekiston <br>
+              Jizzax shaxar<br>
+              Sharof Rashidov ko'chasi 6-uy <br><br>
+              <strong>Phone:</strong> +998 (99) 031 08-12<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Foydali havolalar</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a th:href="@{/home}">Bosh sahifa</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a th:href="@{/books}">Kitoblar</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a th:href="@{/news}">Yangiliklar</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a th:href="@{/about}">Biz haqimizda</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a th:href="@{/cantact}">Biz bilan aloqa qiling</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Bo'limlar</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a th:href="@{/abonement-va-foydalanuvchilarga-xizmat-korsatish-xizmati}">Abonement va foydalanuvchilarga xizmat ko‘rsatish xizmati</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a th:href="@{/axborot-bibliografiya-xizmati}">Axborot-bibliografiya xizmati</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a th:href="@{/fondlarni-toldirish-saqlash-ishlov-berish-xizmati}">Fondlarni to‘ldirish, saqlash ishlov berish xizmati</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a th:href="@{/axborot-kommunikatsiya-texnalogiyalari-va-raqamlashtirish-xizmati}">Axborot kommunikatsiya texnalogiyalari va raqamlashtirish xizmati</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Bizning ijtimoiy tarmoqlarimiz</h4>
+            <p>Biz ijtimoiy tarmoqlarimiz orqali kuzatib boring
+            </p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Books.uz</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="#">GoTigers</a>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-up text-white" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+    </svg>
+  </a>
+  <script th:src="@{/js/jquery.min.js}"></script>
+
+  <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+
+  <script th:src="@{/js/test.min.js}"></script>
+
+  <script th:src="@{/js/demo.js}"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <!-- Vendor JS Files -->
+      <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+      <script src="assets/vendor/aos/aos.js"></script>
+      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+      <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+      <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+      <script src="assets/vendor/php-email-form/validate.js"></script>
+    
+      <!-- Template Main JS File -->
+      <script th:src="@{/assets/js/main.js}"></script>
+      <script type="text/javascript">
+
+        var baseUrl = window.location.origin;
+
+        $(document).ready(function (){
+          $(document).on("click","#send",function (){
+
+
+            var from=$('#formId')[0];
+            var data=new FormData(from);
+
+            var name = $('#name').val();
+            var email = $('#email').val();
+            var subject = $('#subject').val();
+            var message = $('#message').val();
+
+            if (name==="" || email==="" || subject==="" || message===""){
+              swal({
+                title: "Fields Empty!",
+                text: "Maydonlarni to'ldiring",
+                icon: "warning",
+                button: "Yopish",
+              });
+            }
+            if (name!=="" && email!=="" && subject!=="" && message!==""){
+              $.ajax({
+                url:baseUrl+"/api/savechat",
+                type: 'POST',
+                enctype: 'multipart/form-data',
+                data: data,
+                processData: false,
+                contentType: false,
+                cache: false,
+                success: function (data , status , info){
+                  if (info.status==" 200"){
+                    swal({
+                      title: "Success Full",
+                      text: "Malumot yuborildi!",
+                      icon: "success",
+                      button: "Yopish",
+                    });
+
+                    $("#name").val("");
+                    $("#email").val("");
+                    $("#subject").val("");
+                    $("#message").val("");
+                  }
+                  else if (info.status=="208"){
+                    swal({
+                      title: "Error",
+                      text: "Bunday taklif mavjud!",
+                      icon: "error",
+                      button: "Yopish",
+                    });
+
+                    $("#name").val("");
+                    $("#email").val("");
+                    $("#subject").val("");
+                    $("#message").val("");
+
+                  }
+                },
+                error: function (error){
+                  swal({
+                    title: "Error",
+                    text: "Error!",
+                    icon: "error",
+                    button: "Yopish",
+                  });
+                  console.log(error);
+                }
+              })
+            }
+
+
+
+
+          })
+        })
+
+
+
+      </script>
+
+    
+    </body>
+    
+    </html>

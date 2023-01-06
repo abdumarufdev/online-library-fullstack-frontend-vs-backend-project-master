@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/c/CodingLabYT-->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mirzacho'l Axborot-kutubxona markazi | Tizimga kirish</title>
+  <link rel="stylesheet" th:href="@{/assets1/css/loginStyle.css}">
+  <!-- Fontawesome CDN Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+<!--  <link rel="stylesheet" th:href="@{/css/all.min.css}">-->
+
+<!--  <link rel="stylesheet" th:href="@{/css/test.min.css}">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="container">
+
+<!--    <input type="checkbox" id="flip">-->
+    <p style="display:none;" id="kitobId" th:text = "${KitobId}"></p>
+
+    <div class="forms">
+      <div class="form-content">
+        <div class="login-form">
+          <div class="title">Kirish</div>
+          <form id="formDate">
+            <div class="input-boxes text-center">
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="Enter your username" id="username" name="username" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Enter your password" id="password" name="password" required>
+              </div>
+              <div class="button input-box text-center">
+                <button type="button" id="kirishBtn1" class="btn btn-primary w-75 text-center"
+                style="width: 100%; height: 80%; background: #0c84ff; color: white; border: none; padding: 2px 20px; font-size: 18px; border-radius: 5px;cursor: pointer; ">Kirish</button>
+              </div>
+              <div>
+                <p>Ro'yhatan o'tmaganmisiz?</p>
+                <a th:href="@{${'/register/'+ KitobId}}"  style="color: #106eea; text-decoration: none;"> Ro'yhatan o'tish</a>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script th:src="@{/js/jquery.min.js}"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<!--<script th:src="@{/js/bootstrap.bundle.min.js}"></script>-->
+
+<!--<script th:src="@{/js/test.min.js}"></script>-->
+
+<!--<script th:src="@{/js/demo.js}"></script>-->
+<!--<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>-->
+<!--<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>-->
+
+<script type="text/javascript">
+  var baseUrl = window.location.origin;
+
+  $(document).ready(function (){
+    $(document).on("click","#kirishBtn1",function (){
+
+      var email = $("#username").val();
+      var parol = $("#password").val();
+      var kitobId = $("#kitobId").text();
+
+      if (email!=="" && parol!==""){
+        var from=$('#formDate')[0];
+        var data1=new FormData(from);
+
+        $.ajax({
+          url:baseUrl+"/user/signin/user",
+          type: 'POST',
+          enctype: 'multipart/form-data',
+          data: data1,
+          processData: false,
+          contentType: false,
+          cache: false,
+          success: function (data , status , info){
+            if(info.status=="200"){
+              swal({
+                title: "Success",
+                text: "Tizimga kirildi!",
+                icon: "success",
+                buttons: true,
+                dangerMode: true,
+              })
+                      .then((willDelete) => {
+                        if (willDelete) {
+                          window.location = "/ijara/"+kitobId+"/"+data;
+                        }
+                      });
+            }
+            else if(info.status=="208"){
+              swal({
+                title: "Login yoki parol xato!",
+                text:data,
+                icon: "error",
+                buttons: true,
+                dangerMode: true,
+              });
+            }
+          },
+          error: function (error){
+            alert("error "+error);
+            console.log(error);
+            swal({
+              title: "Error "+error,
+              text: "Hatolik!",
+              icon: "error",
+              buttons: true,
+              dangerMode: true,
+            });
+          }
+        })
+      }else{
+        swal({
+          title: "Maydonlarni to'ldiring!",
+          icon: "warning",
+          buttons: true
+        });
+      }
+    })
+  })
+
+
+</script>
+</html>

@@ -1,0 +1,698 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+      <meta charset="utf-8">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+      <title>Mirzacho'l Axborot-kutubxona markazi | QR kode kitoblar</title>
+      <meta content="" name="description">
+      <meta content="" name="keywords">
+
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+      <link rel="stylesheet" th:href="@{/css/all.min.css}">
+
+      <link rel="stylesheet" th:href="@{/css/test.min.css}">
+
+      <!-- Favicons -->
+      <link href="assets1/img/favicon.png" rel="icon">
+      <link href="assets1/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+      <!-- Google Fonts -->
+      <link href="https://fonts.gstatic.com" rel="preconnect">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+      <!-- Vendor CSS Files -->
+      <link th:href="@{/assets1/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+      <link th:href="@{/assets1/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
+      <link th:href="@{/assets1/vendor/boxicons/css/boxicons.min.css}" rel="stylesheet">
+      <link th:href="@{/assets1/vendor/quill/quill.snow.css}" rel="stylesheet">
+      <link th:href="@{/assets1/vendor/quill/quill.bubble.css}" rel="stylesheet">
+      <link th:href="@{/assets1/vendor/remixicon/remixicon.css}" rel="stylesheet">
+      <link th:href="@{/assets1/vendor/simple-datatables/style.css}" rel="stylesheet">
+
+      <!-- Template Main CSS File -->
+      <link th:href="@{/assets1/css/style.css}" rel="stylesheet">
+    </head>
+
+    <body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+
+      <div class="d-flex align-items-center justify-content-between">
+        <a th:href="@{/admin}" class="logo d-flex align-items-center">
+          <!--        <img src="assets1/img/logo.png" alt="">-->
+          <span class="d-none d-lg-block">mirzacholakm.uz</span>
+        </a>
+        <i class="bi bi-list toggle-sidebar-btn"></i>
+      </div><!-- End Logo -->
+
+      <div class="search-bar text-center text-primary">
+        <h3>QR kode kitoblar oynasi</h3>
+      </div><!-- End Search Bar -->
+
+    </header><!-- End Header -->
+
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+      <ul class="sidebar-nav" id="sidebar-nav">
+
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link collapsed " th:href="@{/admin}">-->
+<!--            <i class="bi bi-grid"></i>-->
+<!--            <span>Boshqaruv paneli</span>-->
+<!--          </a>-->
+<!--        </li>-->
+        <!-- End Dashboard Nav -->
+
+        <li class="nav-heading">Pages</li>
+
+        <li class="nav-item">
+          <a class="nav-link collapsed " th:href="@{/addbook}">
+            <i class="bi bi-bookmarks-fill "></i>
+            <span>Elektron kitoblar</span>
+          </a>
+        </li>
+        <!-- End Profile Page Nav -->
+        <li class="nav-item">
+          <a class="nav-link collapsed" th:href="@{/ijara/books}">
+            <i class="bi bi-calendar-date-fill"></i>
+            <span>Ijara kitoblar</span>
+          </a>
+        </li>
+        <!-- End Profile Page Nav -->
+
+        <li class="nav-item">
+          <a class="nav-link collapsed bg-primary text-white" th:href="@{/qr/books}">
+            <i class="bi bi-qr-code-scan text-white"></i>
+            <span>QR kodli kitoblar</span>
+          </a>
+        </li>
+        <!-- End Profile Page Nav -->
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" th:href="@{/addNew}">
+            <i class="bi bi-globe2"></i>
+            <span>Yangiliklar</span>
+          </a>
+        </li>
+
+        <!-- End Contact Page Nav -->
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" th:href="@{/bolim/one}">
+            <i class="bi bi-journal-text"></i>
+            <span>Bo'limlar</span>
+          </a>
+        </li>
+
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link collapsed " data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">-->
+<!--            <i class="bi bi-journal-text "></i><span>Bo'limlar</span><i class="bi bi-chevron-down ms-auto"></i>-->
+<!--          </a>-->
+<!--          <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">-->
+<!--            <li>-->
+<!--              <a th:href="@{/bolim/one}">-->
+<!--                <i class="bi bi-circle"></i><span>Abonement va foydalanuvchilarga xizmat ko‘rsatish xizmati</span>-->
+<!--              </a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a th:href="@{/bolim/two}">-->
+<!--                <i class="bi bi-circle"></i><span>Axborot-bibliografiya xizmati</span>-->
+<!--              </a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a th:href="@{/bolim/three}">-->
+<!--                <i class="bi bi-circle"></i><span>Fondlarni to‘ldirish, saqlash ishlov berish xizmati</span>-->
+<!--              </a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <a th:href="@{/bolim/four}">-->
+<!--                <i class="bi bi-circle"></i><span>Axborot kommunikatsiya texnalogiyalari va raqamlashtirish xizmati</span>-->
+<!--              </a>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--        </li>-->
+        <!-- End Forms Nav -->
+
+        <li class="nav-item">
+          <a class="nav-link collapsed " th:href="@{/tadbirlar}">
+            <i class="bi bi-calendar-event-fill "></i>
+            <span>Tadbirlar</span>
+          </a>
+        </li>
+        <!-- End Contact Page Nav -->
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" th:href="@{/contact-us-panel}">
+            <i class="bi bi-geo-alt"></i>
+            <span>Manzil</span>
+          </a>
+        </li><!-- End Biz bilan bog'lanish Page Nav -->
+
+        <li class="nav-item">
+          <a class="nav-link collapsed" th:href="@{/about-uz-panel}">
+            <i class="bi bi-microsoft-teams"></i>
+            <span>Biz haqimizda</span>
+          </a>
+        </li>
+        <!-- End Biz haqimizda Page Nav -->
+        <li class="nav-item">
+          <a class="nav-link collapsed" th:href="@{/users}">
+            <i class="bi bi-microsoft-teams"></i>
+            <span>Users</span>
+          </a>
+        </li>
+        <!-- End Users Page Nav -->
+
+        <li class="nav-item">
+          <a class="nav-link collapsed " th:href="@{/ijaraberilgan}">
+            <i class="bi bi-microsoft-teams "></i>
+            <span>Ijaraga berilgan kitoblar</span>
+          </a>
+        </li>
+        <!-- End Users Page Nav -->
+        <li class="nav-item">
+          <a class="nav-link collapsed " th:href="@{/parol}">
+            <i class="bi bi-key-fill "></i>
+            <span>Parol</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+    <!-- End Sidebar-->
+
+    <main id="main" class="main">
+      <div class="pagetitle">
+        <h1>QR kodli kitoblar joylash</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="">Home</a></li>
+            <li class="breadcrumb-item active">QR kode kitoblar</li>
+          </ol>
+        </nav>
+      </div>
+
+      <!-- ==================  end link ===================== -->
+
+      <!-- =================== go jadval ==================== -->
+      <section id="jadval">
+        <div class="row">
+          <div class="headers text-center text-primary mb-2">
+            <h2>QR code kitob qo'shish</h2>
+          </div>
+          <div class="col-lg-12">
+            <button class="btn btn-primary my-3" data-bs-toggle="modal" data-bs-target="#insert">QR code kitob qo'shish <i class="bi bi-plus-circle"></i></button>
+            <div class="scrols" style="overflow-x: scroll; max-width: 100%; min-width: 300px;">
+              <table class="table table-bordered border-primary mr-5 text-center" id="table1"
+                     style="min-width: max-content;">
+                <thead>
+                <tr class="bg-primary text-white">
+                  <th scope="col">ID</th>
+                  <th scope="col">Kitob nomi</th>
+                  <th scope="col">Kitob muallifi</th>
+                  <th scope="col">Kitob Janr</th>
+                  <th scope="col">Kitob chiqan yil</th>
+                  <th scope="col">Kitob katagoriyasi</th>
+                  <th scope="col">Kitob muqovasi</th>
+                  <th scope="col">Tahirlash / O'chirish</th>
+                </tr>
+
+                </thead>
+                <tbody id="tbody">
+                <tr th:each = "kitob : ${QrcodeBook}">
+                  <td scope="row" th:text = "${kitob.id}"></td>
+                  <td th:text = "${kitob.nomi}"></td>
+                  <td th:text = "${kitob.muallif}"></td>
+                  <td th:text = "${kitob.janri}"></td>
+                  <td th:text = "${kitob.yil}"></td>
+                  <td th:text = "${kitob.katagoriya}"></td>
+                  <td style="width: 50px; height: 80px"> <img th:src="@{${'/qr/img/'+kitob.id}}" class="card-img-top" alt="rasm" width="100%" height="100%"> </td>
+                  <td>
+
+                    <div class="btn btn-success px-3 mx-3" data-bs-toggle="modal" data-bs-target="#editModal" th:data-editid="${kitob.id}" id="tahirlashBtn">
+                      <i class="bi bi-pencil-fill"></i> Tahirlash</div>
+
+                    <button class="btn btn-danger px-3 mx-3" id="deleteButton" th:data-id="${kitob.id}" >
+                      <i class="bi bi-trash3-fill mr-2"></i> O'chirish</button>
+
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!-- =================== end jadval ==================== -->
+
+
+
+      <!-- ======================= Qo'shish Modal ================== -->
+
+      <div class="modal fade " id="insert" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+           aria-labelledby="staticBackdropLabel" aria-hidden="true" style="box-shadow: 50px 50px 100px rgba(0 ,0,0,0);">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-primary">QR code kitob qo'shish</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="qoshishText">
+              <form id="formid">
+                <div class="row">
+
+                  <div class="col-lg-6">
+                    <div class="user my-3 text-left">
+                      <label class="text-primary">- Kitob nomi!</label>
+                      <div class="input-group">
+                        <input class="form-control" type="text" id="kitobNomi" name="kitobNomi" placeholder="Kitob nomini kiriting!"
+                               required>
+                      </div>
+                    </div>
+                    <div class="user my-3 text-left">
+                      <label class="text-primary">- Kitob muallifi!</label>
+                      <div class="input-group">
+                        <input class="form-control" type="text" id="kitobMuallifi" name="kitobMuallifi" placeholder="Kitob muallifi" required>
+                      </div>
+                    </div>
+                    <div class="user my-3 text-left">
+                      <label class="text-primary">- Janrni tanglang!</label>
+                      <div class="input-group">
+                        <select class="form-select" aria-label="Kategoriyani tanglang" id="janr" name="janr">
+                          <option selected>Janrni tanglang!</option>
+                          <option value="Roman">Roman</option>
+                          <option value="Hikoya">Hikoyalar</option>
+                          <option value="Qissa">Qissa</option>
+                          <option value="She'rlar">She'rlar</option>
+                          <option value="Poemalar">Poemalar</option>
+                          <option value="Dramaturgiya">Dramaturgiya</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="user my-3 text-left">
+                      <label class="text-primary">- Kitob chiqan yil!</label>
+                      <div class="input-group">
+                        <input class="form-control" type="date" id="kitobDate" name="kitobDate" required>
+                      </div>
+                    </div>
+                    <div class="user my-3 text-left">
+                      <label class="text-primary">- Kitob muqovasi</label>
+                      <div class="input-group">
+                        <input class="form-control" type="file" id="kitobMuqova" name="kitobMuqova" required>
+                      </div>
+                    </div>
+                    <div class="user my-3 text-left">
+                      <label class="text-primary">- Katagoriyani</label>
+                      <div class="input-group">
+                        <select class="form-select" aria-label="Kategoriyani tanglang" id="katagoriya" name="katagoriya">
+                          <option value="0">Kategoriyani tanglang!</option>
+                          <option value="Badiy adabiyoti">Badiy adabiyoti</option>
+                          <option value="Bolalar adabitoti">Bolalar adabitoti</option>
+                          <option value="Ilmiy adabitoti">Ilmiy adabitoti</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--              <div class="row">-->
+                <!--                <div class="col-12">-->
+                <!--                  <label for="katagoriya" class="text-primary"> - </label>-->
+                <!--                  <div class="form-floating">-->
+                <!--                    <select class="form-select" aria-label="Kategoriyani tanglang" id="katagoriya" name="katagoriya">-->
+
+                <!--                    </select>-->
+                <!--                  </div>-->
+                <!--                </div>-->
+                <!--              </div>-->
+              </form>
+              <small class="ml-3 text-danger text-left" id="insertError"></small>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" id="close2" data-bs-dismiss="modal" >Yopish</button>
+              <button type="button" class="btn btn-primary" id="qoshBtn">Qo`shish</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======================= end Edit Modal ================== -->
+
+      <!-- ======================= Qo'shish Modal ================== -->
+
+      <div class="modal fade" id="editModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+           aria-labelledby="staticBackdropLabel" aria-hidden="true" style="box-shadow: 50px 50px 100px rgba(0 ,0,0,0);">
+        <div class="modal-dialog  modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-primary">Kitob tahirlash</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="editText">
+              <form id="editForm1">
+                <div class="row">
+
+                  <input type="text" style="display: none" id="editId12" name="editId12">
+                  <div class="col-lg-6">
+                    <div class="user my-3 text-left">
+                      <label class="text-primary">- Kitob nomi!</label>
+                      <div class="input-group">
+                        <input class="form-control" type="text" id="nomiEdit" name="nomiEdit" placeholder="Kitob nomini kiriting!"
+                               required>
+                      </div>
+                    </div>
+                    <div class="user my-3 text-left">
+                      <label class="text-primary">- Kitob muallifi!</label>
+                      <div class="input-group">
+                        <input class="form-control" type="text" id="muallifEdit" name="muallifEdit" placeholder="Kitob muallifi" required>
+                      </div>
+                    </div>
+                    <div class="user my-3 text-left">
+                      <label class="text-primary">- Janrni tanglang!</label>
+                      <div class="input-group">
+                        <select class="form-select" aria-label="Kategoriyani tanglang" id="janrEdit" name="janrEdit">
+                          <option selected>Janrni tanglang!</option>
+                          <option value="Roman">Roman</option>
+                          <option value="Hikoya">Hikoyalar</option>
+                          <option value="Qissa">Qissa</option>
+                          <option value="She'rlar">She'rlar</option>
+                          <option value="Poemalar">Poemalar</option>
+                          <option value="Dramaturgiya">Dramaturgiya</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="user my-3 text-left">
+                      <label class="text-primary">- Kitob muqovasi!</label>
+                      <div class="input-group">
+                        <input class="form-control" type="file" id="muqovaEdit" name="muqovaEdit" required>
+                      </div>
+                    </div>
+
+                    <div class="user my-3 text-left">
+                      <label for="katagoriya" class="text-primary"> - Katagoriya</label>
+                      <div class="input-group">
+                        <select class="form-select" aria-label="Kategoriyani tanglang" id="katagoriyaEdit" name="katagoriyaEdit">
+                          <option value="0">Kategoriyani tanglang!</option>
+                          <option value="Badiy adabiyoti">Badiy adabiyoti</option>
+                          <option value="Bolalar adabitoti">Bolalar adabitoti</option>
+                          <option value="Ilmiy adabitoti">Ilmiy adabitoti</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <input type="text" style="display: none" id="editId1" name="editId">
+
+                  </div>
+                </div>
+              </form>
+              <small class="ml-3 text-danger text-left" id="editError"></small>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" id="editClose" data-bs-dismiss="modal" >Yopish</button>
+              <button type="button" class="btn btn-primary" id="editBtnQr">Tahirlash</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======================== delete modal ======================== -->
+
+      <!-- Button trigger modal -->
+      <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#delete">
+    Launch demo modal
+    </button> -->
+
+      <!-- Modal -->
+      <div class="modal fade" id="delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Kitobni o'chirish</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex">
+              <h2 id="deleteId" class="text-danger"></h2>
+              <h3 id="deleteText"> - id malumotni o'chirish!</h3>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <a><button type="button" class="btn btn-danger" id="delBtn">O'chirish</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ===================================== end delete modal =========================== -->
+
+
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+      <div class="copyright">
+        &copy;  <strong><span>mirzacholakm.uz 2022</span></strong>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <script th:src="@{/js/jquery.min.js}"></script>
+
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+
+    <script th:src="@{/js/test.min.js}"></script>
+
+    <script th:src="@{/js/demo.js}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <!-- Vendor JS Files -->
+    <script th:src="@{/assets1/vendor/apexcharts/apexcharts.min.js}"></script>
+    <script th:src="@{/assets1/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+    <script th:src="@{/assets1/vendor/chart.js/chart.min.js}"></script>
+    <script th:src="@{/assets1/vendor/echarts/echarts.min.js}"></script>
+    <script th:src="@{/assets1/vendor/quill/quill.min.js}"></script>
+    <script th:src="@{/assets1/vendor/simple-datatables/simple-datatables.js}"></script>
+    <script th:src="@{/assets1/vendor/tinymce/tinymce.min.js}"></script>
+    <script th:src="@{/assets1/vendor/php-email-form/validate.js}"></script>
+    <!-- Template Main JS File -->
+    <script th:src="@{/assets1/js/main.js}"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript">
+
+      var baseUrl = window.location.origin;
+
+      var data;
+
+      $("#table1").on("click","tbody tr #deleteButton", function (e){
+        $tr=$(this).closest('tr');
+        data = $tr.children("td").map(function (){
+          return $(this).text();
+        }).get();
+      });
+
+
+      $("#table1").on("click","tbody tr #tahirlashBtn", function (e){
+        $tr=$(this).closest('tr');
+        var editObject = $tr.children("td").map(function (){
+          return $(this).text();
+        }).get();
+
+        if (editObject[0]!=null){
+          $('#editId12').val(editObject[0])
+          $('#nomiEdit').val(editObject[1]);
+          $('#muallifEdit').val(editObject[2]);
+          $('#janrEdit').val(editObject[3]);
+          $('#katagoriyaEdit').val(editObject[5]);
+        }
+      });
+
+
+      $(document).ready(function (){
+        $(document).on("click","#qoshBtn",function (){
+
+          var name = $('#kitobNomi').val();
+          var muallifi = $('#kitobMuallifi').val();
+          var katagoriya = $('#katagoriya').val();
+          var janr = $('#janr').val();
+          var yil = $('#kitobDate').val();
+          var muqova = $('#kitobMuqova').val();
+
+          var from=$('#formid')[0];
+          var data1=new FormData(from);
+
+          if (name!=="" && muallifi!=="" && katagoriya!==0 && yil!=="" && muqova!=="" && janr!==0){
+            $.ajax({
+              url:baseUrl+"/api/qrcode/book",
+              type: 'POST',
+              enctype: 'multipart/form-data',
+              data: data1,
+              processData: false,
+              contentType: false,
+              cache: false,
+              success: function (data , status , info){
+                if(info.status=="200"){
+                  swal({
+                    title: "Success Full",
+                    text: "Ijaraga beriladigan kitob muvaffaqiyatli joylandi!",
+                    icon: "success",
+                    buttons: true,
+                    dangerMode: true,
+                  })
+                          .then((willDelete) => {
+                            if (willDelete) {
+                              clearBook();
+                              $("#insert").modal('hide')
+                              window.location = "/qr/books";
+                            }
+                          });
+                }
+                else if(info.status=="208"){
+                  swal({
+                    title: "Warning",
+                    text: "Bunday QR code kitob mavjud!",
+                    icon: "error",
+                    buttons: true,
+                    dangerMode: true,
+                  });
+                }
+              },
+              error: function (error){
+                alert("error "+error);
+                console.log(error);
+              }
+            })
+          }else{
+            swal({
+              title: "Warning",
+              text: "Maydonlarni to'ldiring!",
+              icon: "warning",
+              buttons: true,
+              dangerMode: true,
+            });
+          }
+
+        })
+      })
+
+
+      function clearBook(){
+        $('#kitobNomi').val("");
+        $('#kitobMuallifi').val("");
+        $('#kitobFile').val("");
+        $('#kitobMuqova').val("");
+        $('#kitobDate').val("");
+        $('#janr').val("");
+        $('#katagoriya').val("");
+      }
+
+
+      $(document).ready(function (){
+        $(document).on("click","#deleteButton", function (){
+
+          swal({
+            title: "Delete Book",
+            text: "Malumotni o'chirmoqchimisiz!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          })
+                  .then((willDelete) => {
+                    if (willDelete) {
+                      $.ajax({
+                        url: baseUrl+"/api/qr/delete/"+data[0]+"",
+                        type: "DELETE",
+                        success: function (){
+                          clearBook();
+                          window.location = "/qr/books";
+                        },
+                        error: function (error){
+                          alert("error = "+error);
+                        }
+                      })
+                    }
+                  });
+        })
+      })
+
+
+      $(document).ready(function () {
+        $(document).on("click","#editBtnQr", function (){
+
+          var name = $('#nomiEdit').val();
+          var muallifi = $('#muallifEdit').val();
+          var katagoriya = $('#katagoriyaEdit').val();
+          var janr = $('#janrEdit').val();
+          var muqova = $('#muqovaEdit').val();
+
+          if (name!=="" && muallifi!=="" && katagoriya!==0 && janr!==0){
+
+          var from=$('#editForm1')[0];
+          var data=new FormData(from);
+
+            $.ajax({
+              url:baseUrl+"/api/qr/books",
+              type: 'PUT',
+              enctype: 'multipart/form-data',
+              data: data,
+              processData: false,
+              contentType: false,
+              cache: false,
+              success: function (data , status , info){
+                if (info.status=="200"){
+                  swal({
+                    title: "Success full",
+                    text: "QR code kitob muvafaqiyatli tahirlandi!",
+                    icon: "success",
+                    buttons: true,
+                    dangerMode: true,
+                  })
+                          .then((willDelete) => {
+                            if (willDelete) {
+                               window.location="/qr/books";
+                            }
+                          });
+                }else if (info.status=="208"){
+                  swal({
+                    title: "Xatolik!",
+                    text: "Malimot tahirlanmadi!",
+                    icon: "error",
+                    button: "Yopish",
+                  });
+                }
+              },
+              error: function (error){
+                swal({
+                  title: "Error! "+error,
+                  text: "Malimot tahirlanmadi!",
+                  icon: "error",
+                  button: "Yopish",
+                });
+              }
+            })
+          }else {
+
+            swal({
+              title: "Xatolik!",
+              text: "Maydonlarni to'ldiring!",
+              icon: "warning",
+              button: "Yopish",
+            });
+
+          }
+        })
+      })
+
+
+    </script>
+    </body>
+
+    </html>

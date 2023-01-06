@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Mirzacho'l Axborot-kutubxona markazi</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <!-- ICONS -->
+  <!-- <link href="assets/img/favicon.png" rel="icon"> -->
+  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  <link rel="stylesheet" th:href="@{/assets/css/ab.css}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link th:href="@{/assets/css/style2.css}" rel="stylesheet">
+
+  <!-- =======================================================
+  ======================================================== -->
+
+</head>
+<style  >
+  .card{
+    border: 1px solid #dedede;
+  }
+  .card:hover{
+    border: 2px solid #106eea;
+    transition: .3s;
+  }
+  #news1:hover{
+    border: 2px solid #106eea;
+    transition: .3s;
+  }
+  #news-1{
+    border: 1px solid #a9a9a9;
+    transition: .3s;
+  }
+  #news-1:hover{
+    border: 2px solid #0c84ff;
+  }
+</style>
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a th:href="@{/home}">mirzacholakm<span>.uz</span></a></h1>
+      <!-- image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a> -->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Bosh sahifa</a></li>
+          <li class="dropdown scrollto"><a href="#jahon"><span>Kitoblar</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="scrollto" href="#jahon">Badiy adabiyoti</a></li>
+              <li><a class="scrollto" href="#badiy">Bolalar adabiyotlar</a></li>
+              <li><a class="scrollto" href="#ilmiy">Ilmiy adabiyotlar</a></li>
+              <li><a class="scrollto" href="#qrcode">QR ko'dli kitoblar</a></li>
+            </ul>
+          </li>
+          <li class="dropdown scrollto"><a href="#jahon"><span>Bo'limlar</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="scrollto" th:href="@{/abonement-va-foydalanuvchilarga-xizmat-korsatish-xizmati}">Abonement va foydalanuvchilarga xizmat ko‘rsatish xizmati</a></li>
+              <li><a class="scrollto" th:href="@{/axborot-bibliografiya-xizmati}">Axborot-bibliografiya xizmati</a></li>
+              <li><a class="scrollto" th:href="@{/fondlarni-toldirish-saqlash-ishlov-berish-xizmati}">Fondlarni to‘ldirish, saqlash ishlov berish xizmati</a></li>
+              <li><a class="scrollto" th:href="@{/axborot-kommunikatsiya-texnalogiyalari-va-raqamlashtirish-xizmati}">Axborot kommunikatsiya texnalogiyalari va raqamlashtirish xizmati</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#tadbirlar">Tadbirlar</a></li>
+          <li><a class="nav-link scrollto" href="#recent-blog-posts">Yangiliklar</a></li>
+          <li><a class="nav-link scrollto " href="#about">Biz haqimizda</a></li>
+          <li><a class="nav-link scrollto " th:href="@{/cantact}">Biz bilan bog'lanish</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+
+      <!-- .navbar -->
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-stretch" >
+    <div class="container" data-aos="zoom-out" data-aos-delay="50">
+      <div class="row">
+        <div class="col-lg-6 col-md-12" style="margin-top: 100px;" data-aos="fade-left" data-aos-delay="50">
+          <div class="hero-text mt-5">
+            <h1>Mirzachoʻl tuman <span>Axborot -kutubxona </span>markazi!</h1>
+            <h2>Agar inson ilm nuri bilan o'z yo'lini yoritmasa, zulmat va nodonlik ko'chasida qoladi.</h2>
+            <div class="d-flex">
+              <a href="#jahon" class="btn-get-started scrollto">Kitoblar</a>
+              <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12" data-aos="fade-right" data-aos-delay="50">
+          <div class="imgs mb-5">
+<!--            <img th:src="@{/assets/img/Library-bro.png}" alt="" width="100%" height="100%">-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Jahon adabiyoti Section ======= -->
+    <section id="jahon" class="about section-bg" style="background: #fcfffc">
+      <div class="container" >
+        <div class="section-title">
+          <div class="row">
+            <div class="col-lg-6 col-md-12  ">
+              <h1 class="logo" style="text-align: left; font-size: 35px;"><a href="#" style="color:rgb(0,0,0);">Badiy  <span style="color: #0d6efd;">
+                   adabiyotlar </span></a></h1>
+            </div>
+            <div class="barcha-books col-lg-6 col-md-12  mt-2 " style="text-align: right; font-size: 10px">
+              <a th:href="@{/books}" style="font-size: 25px; align-items: center; cursor: pointer;">
+                Barcha kitoblar
+                <i class="bi bi-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="slide-container swiper">
+            <div class="slide-content">
+              <div class="card-wrapper swiper-wrapper">
+
+                <!-- Card -->
+
+                <div class="card swiper-slide py-4 px-4"   th:each = "kitob : ${BadiyAdabiyot}">
+
+                  <a th:href="@{${'/dowlond/'+ kitob.id}}">
+                    <div class="card-img " style="width: 100%; height: 280px;">
+                      <img  th:src="@{${'/image/display/'+ kitob.id}}"  class="card-img-top" alt="rasm"  height="280px">
+                    </div>
+                    <div class="card-body ">
+                      <div class="text-secondary text-center">
+                        <h6 class="h4 card-title" style="font-size: 18px" th:text = "${kitob.nomi}"></h6>
+                        <p class="card-text" style="font-size: 14px" th:text = "${kitob.muallif}"></p>
+                      </div>
+                      <!--                      <a th:href="@{/books}" class="btn btn-primary">Barcha  kitoblar <i class="bi bi-arrow-right-circle"></i></a>-->
+                    </div>
+                  </a>
+
+                </div>
+
+                <!-- end Card -->
+
+              </div>
+            </div>
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <!-- <header class="section-header">
+          <h2>Jahon adabiyoti</h2>
+        </header> -->
+        <div class="section-title">
+
+          <div class="row">
+            <div class="col-lg-6 col-md-12">
+              <h1 class="logo" style="text-align: left; font-size: 35px;"><a href="#buyurtma" style="color:rgb(0,0,0);">Ijaraga<span style="color: #0d6efd;">
+                    olish</span></a></h1>
+            </div>
+            <div class="barcha-books col-lg-6 col-md-12  mt-2 " style="text-align: right; font-size: 10px">
+              <a th:href="@{/ijara}" style="font-size: 25px; align-items: center; cursor: pointer;">
+                Barcha kitoblar
+                <i class="bi bi-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="slide-container swiper">
+            <div class="slide-content">
+              <div class="card-wrapper swiper-wrapper">
+
+                <!-- Card -->
+
+                <div class="card swiper-slide py-4 px-4"   th:each = "kitob : ${Badiy1}"  >
+
+                  <a th:href="@{${'/kirish/'+ kitob.id}}">
+                    <div class="card-img " style="width: 100%; height: 280px;">
+                      <img  th:src="@{${'/image/ijara/'+ kitob.id}}"  class="card-img-top" alt="rasm"  height="280px">
+                    </div>
+                    <div class="card-body">
+                      <div class="text-secondary text-center">
+                        <h6 class="h4 card-title" style="font-size: 18px" th:text = "${kitob.nomi}"></h6>
+                        <p class="card-text" style="font-size: 14px" th:text = "${kitob.muallif}"></p>
+                        <a th:href="@{${'/kirish/'+ kitob.id}}" class="btn my-2" id="b-b">Ijaraga olish</a>
+                      </div>
+                      <!--                      <a th:href="@{/books}" class="btn btn-primary">Barcha  kitoblar <i class="bi bi-arrow-right-circle"></i></a>-->
+                    </div>
+                  </a>
+                </div>
+
+                <!-- end Card -->
+
+              </div>
+            </div>
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Jahon adabiyoti Section -->
+
+    <!-- ======= Badiy adabiyoti Section ======= -->
+    <section id="badiy" class="about section-bg" style="background: #fcfffc;">
+      <div class="container">
+        <div class="section-title">
+          <div class="row">
+            <div class="col-lg-6 col-md-12">
+              <h1 class="logo" style="text-align: left; font-size: 35px;"><a href="#buyurtma" style="color:rgb(0,0,0);">Bolalar <span style="color: #0d6efd;">
+                    adabiyoti</span></a>
+              </h1>
+            </div>
+            <div class="barcha-books col-lg-6 col-md-12  mt-2 " style="text-align: right; font-size: 10px">
+              <a th:href="@{/books}" style="font-size: 25px; align-items: center; cursor: pointer;">
+                Barcha kitoblar
+                <i class="bi bi-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="slide-container swiper">
+            <div class="slide-content">
+              <div class="card-wrapper swiper-wrapper">
+
+                <!-- Card -->
+
+                <div class="card swiper-slide py-4 px-4" id="card1"  th:each = "kitob : ${BolalarAdabiyot}">
+
+                  <a th:href="@{${'/dowlond/'+ kitob.id}}">
+                    <div class="card-img" style="width: 100%; height: 280px;">
+                      <img  th:src="@{${'/image/display/'+ kitob.id}}"  class="card-img-top" alt="rasm"  height="280px">
+                    </div>
+                    <div class="card-body ">
+                      <div class="text-secondary text-center">
+                        <h6 class="h4 card-title" style="font-size: 18px" th:text = "${kitob.nomi}"></h6>
+                        <p class="card-text" style="font-size: 14px" th:text = "${kitob.muallif}"></p>
+                      </div>
+                      <!--                      <a th:href="@{/books}" class="btn btn-primary">Barcha kitoblar <i class="bi bi-arrow-right-circle"></i></a>-->
+                    </div>
+                  </a>
+                </div>
+                <!-- end Card -->
+              </div>
+            </div>
+
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+      </div>
+      <div class="container">
+        <!-- <header class="section-header">
+          <h2>Jahon adabiyoti</h2>
+        </header> -->
+        <div class="section-title">
+          <div class="row">
+            <div class="col-lg-6 col-md-12">
+              <h1 class="logo" style="text-align: left; font-size: 35px;"><a href="#buyurtma" style="color:rgb(0,0,0);">Ijaraga<span style="color: #0d6efd;">
+                    olish</span></a></h1>
+            </div>
+            <div class="barcha-books col-lg-6 col-md-12  mt-2 " style="text-align: right; font-size: 10px">
+              <a th:href="@{/ijara}" style="font-size: 25px; align-items: center; cursor: pointer;">
+                Barcha kitoblar
+                <i class="bi bi-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="slide-container swiper">
+            <div class="slide-content">
+              <div class="card-wrapper swiper-wrapper">
+
+                <!-- Card -->
+
+                <div class="card swiper-slide py-4 px-4"   th:each = "kitob : ${Bolalar1}">
+
+                  <a th:href="@{${'/kirish/'+ kitob.id}}">
+                    <div class="card-img " style="width: 100%; height: 280px;">
+                      <img  th:src="@{${'/image/ijara/'+ kitob.id}}"  class="card-img-top" alt="rasm"  height="280px">
+                    </div>
+                    <div class="card-body">
+                      <div class="text-secondary text-center">
+                        <h6 class="h4 card-title" style="font-size: 18px" th:text = "${kitob.nomi}"></h6>
+                        <p class="card-text" style="font-size: 14px" th:text = "${kitob.muallif}"></p>
+                        <a th:href="@{${'/kirish/'+ kitob.id}}" class="btn my-2" id="b-b">Ijaraga olish</a>
+                      </div>
+                      <!--                      <a th:href="@{/books}" class="btn btn-primary">Barcha  kitoblar <i class="bi bi-arrow-right-circle"></i></a>-->
+                    </div>
+                  </a>
+
+                </div>
+
+                <!-- end Card -->
+
+              </div>
+            </div>
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Badiy adabiyoti Section -->
+
+    <!-- ======= Badiy adabiyoti Section ======= -->
+    <section id="ilmiy" class="about section-bg" style="background: #fcfffc;">
+      <div class="container">
+        <div class="section-title">
+          <div class="row">
+            <div class="col-lg-6 col-md-12">
+              <h1 class="logo" style="text-align: left; font-size: 35px;"><a href="#buyurtma" style="color:rgb(0,0,0);">Ilmiy <span style="color: #0d6efd;">
+                    adabiyoti</span></a>
+              </h1>
+            </div>
+            <div class="barcha-books col-lg-6 col-md-12  mt-2 " style="text-align: right; font-size: 10px">
+              <a th:href="@{/books}" style="font-size: 25px; align-items: center; cursor: pointer;">
+                Barcha kitoblar
+                <i class="bi bi-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="slide-container swiper">
+            <div class="slide-content">
+              <div class="card-wrapper swiper-wrapper">
+
+                <!-- Card -->
+
+                <div class="card swiper-slide py-4 px-4" id="card1"  th:each = "kitob : ${IlmiyAdabiyot}">
+
+                  <a th:href="@{${'/dowlond/'+ kitob.id}}">
+                    <div class="card-img" style="width: 100%; height: 280px;">
+                      <img  th:src="@{${'/image/display/'+ kitob.id}}"  class="card-img-top" alt="rasm"  height="280px">
+                    </div>
+                    <div class="card-body ">
+                      <div class="text-secondary text-center">
+                        <h6 class="h4 card-title" style="font-size: 18px" th:text = "${kitob.nomi}"></h6>
+                        <p class="card-text" style="font-size: 14px" th:text = "${kitob.muallif}"></p>
+                      </div>
+                      <!--                      <a th:href="@{/books}" class="btn btn-primary">Barcha kitoblar <i class="bi bi-arrow-right-circle"></i></a>-->
+                    </div>
+                  </a>
+
+                </div>
+
+                <!-- end Card -->
+
+              </div>
+            </div>
+
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+      </div>
+      <div class="container">
+        <!-- <header class="section-header">
+          <h2>Jahon adabiyoti</h2>
+        </header> -->
+        <div class="section-title">
+          <div class="row">
+            <div class="col-lg-6 col-md-12">
+              <h1 class="logo" style="text-align: left; font-size: 35px;"><a href="#buyurtma" style="color:rgb(0,0,0);">Ijaraga<span style="color: #0d6efd;">
+                    olish</span></a></h1>
+            </div>
+            <div class="barcha-books col-lg-6 col-md-12  mt-2 " style="text-align: right; font-size: 10px">
+              <a th:href="@{/ijara}" style="font-size: 25px; align-items: center; cursor: pointer;">
+                Barcha kitoblar
+                <i class="bi bi-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="slide-container swiper">
+            <div class="slide-content">
+              <div class="card-wrapper swiper-wrapper">
+
+                <!-- Card -->
+
+                <div class="card swiper-slide py-4 px-4"   th:each = "kitob : ${Ilmiy1}">
+
+                  <a th:href="@{${'/kirish/'+ kitob.id}}">
+                    <div class="card-img " style="width: 100%; height: 280px;">
+                      <img  th:src="@{${'/image/ijara/'+ kitob.id}}"  class="card-img-top" alt="rasm"  height="280px">
+                    </div>
+                    <div class="card-body">
+                      <div class="text-secondary text-center">
+                        <h6 class="h4 card-title" style="font-size: 18px" th:text = "${kitob.nomi}"></h6>
+                        <p class="card-text" style="font-size: 14px" th:text = "${kitob.muallif}"></p>
+                        <a th:href="@{${'/kirish/'+ kitob.id}}" class="btn my-2" id="b-b">Ijaraga olish</a>
+                      </div>
+                      <!--                      <a th:href="@{/books}" class="btn btn-primary">Barcha  kitoblar <i class="bi bi-arrow-right-circle"></i></a>-->
+                    </div>
+                  </a>
+
+                </div>
+
+                <!-- end Card -->
+
+              </div>
+            </div>
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Badiy adabiyoti Section -->
+
+    <!-- ======= QR codli kitoblar Section ======= -->-
+    <section id="qrcode" class="about section-bg" style="background: #fcfffc;">
+      <div class="container">
+
+        <!-- <header class="section-header1">
+          <h2>Badiy adabiyotlar</h2>
+        </header> -->
+
+        <div class="section-title">
+          <div class="row">
+            <div class="col-lg-6 col-md-12">
+              <h1 class="logo" style="text-align: left; font-size: 35px;"><a href="#buyurtma" style="color:rgb(0,0,0);">QR kodli <span style="color: #0d6efd;">
+                    kitoblar</span></a>
+              </h1>
+            </div>
+            <div class="barcha-books col-lg-6 col-md-12  mt-2 " style="text-align: right; font-size: 10px">
+              <a th:href="@{/qrbooks}" style="font-size: 25px; align-items: center; cursor: pointer;">
+                Barcha kitoblar
+                <i class="bi bi-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="slide-container swiper">
+            <div class="slide-content">
+              <div class="card-wrapper swiper-wrapper">
+
+                <!-- Card -->
+
+                <div class="card swiper-slide py-4 px-4" id="card1"  th:each = "kitob : ${Qrbook}">
+
+                  <a th:href="@{${'/qr/book/'+ kitob.id}}">
+                    <div class="card-img" style="width: 100%; height: 280px;">
+                      <img  th:src="@{${'/qr/img/'+ kitob.id}}"  class="card-img-top" alt="rasm"  height="280px">
+                    </div>
+                    <div class="card-body ">
+                      <div class="text-secondary text-center">
+                        <h6 class="h4 card-title" style="font-size: 18px" th:text = "${kitob.nomi}"></h6>
+                        <p class="card-text" style="font-size: 14px" th:text = "${kitob.muallif}"></p>
+                      </div>
+                      <!--                      <a th:href="@{/books}" class="btn btn-primary">Barcha kitoblar <i class="bi bi-arrow-right-circle"></i></a>-->
+                    </div>
+                  </a>
+
+                </div>
+
+                <!-- end Card -->
+
+              </div>
+            </div>
+
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End QR codli kitoblar Section -->
+
+    <!-- ======= Manbalar soni (count) Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container">
+        <header class="section-header1" >
+          <h2>Manbalar</h2>
+        </header>
+        <div class="row" >
+
+          <div class="col-lg-3 col-md-6 " >
+            <div class="count-box ">
+              <i class="bi bi-layout-text-window-reverse"></i>
+              <span data-purecounter-start="0" th:data-purecounter-end="${OpshiKitoblar}" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Jami kitoblar</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="bi bi-globe"></i>
+              <span data-purecounter-start="0" th:data-purecounter-end="${Opshibadiy}" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Badiy adabiyoti</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-book"></i>
+              <span data-purecounter-start="0" th:data-purecounter-end="${Opshibolalar}" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Bolalar adabiyotlari</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0" >
+            <div class="count-box">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" th:data-purecounter-end="${Opshiilmiy}" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p>Ilmiy adabiyotlar</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Manbalar soni (count) Section -->
+
+    <!-- ======= TadbirlarSection ======= -->
+    <section id="tadbirlar" class=" mb-5" style="max-height: 2500px;">
+
+      <div class="container" data-aos="fade-up">
+        <header class="section-header1">
+          <h2>Tadbirlar</h2>
+        </header>
+        <div class="row border p-4 mb-5" style="" th:each = "t : ${Tadbirs}">
+          <div class="col-lg-6 col-md-12 col-sm-12">
+            <h2 th:text = "${t.sarlavha}"></h2>
+            <p th:text = "${t.text}" style="height: 450px; overflow: hidden;"></p>
+            <div>
+              <a th:href="@{${'/about/'+t.id}}" id="b-b" style="background: #106eea; border-radius: 5px; color: #fff"
+                 class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center py-2">
+                <span>Batafsil malumot</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6 img mt-md-3 mt-sm-3 d-lg-block mt-2" style="height: 540px;">
+            <img th:src="@{${'/tadbirlar/img/'+t.id}}" class="card-img-top" alt="yangilik uchun rasm!" width="100%" height="100%">
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+    <!-- End Tadbirlar Section -->
+
+    <!-- ======= Yangiliklar Section ======= -->
+    <section id="recent-blog-posts" class="recent-blog-posts" style="max-height: 3000px; box-sizing: border-box">
+      <div class="container">
+        <header class="section-header1">
+          <h2>Yangiliklar</h2>
+        </header>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12 card p-2 my-2"  style="border: none" th:each = "news : ${Yangilik}">
+            <div class="yangilik p-4" id="news-1">
+              <div class="img" style="height: 240px">
+                <img th:src="@{${'/image/new/'+news.id}}" class="card-img-top" alt="yangilik uchun rasm!" height="100%">
+              </div>
+              <div class="mt-3" style="">
+                <span class="sarlavha" style="color: #0c84ff; font-size: 24px; " th:text = "${news.nomi}">Sarlavha</span>
+                <p style="color: #575757; height: 50px; overflow: hidden;"  th:text = "${news.izoh}">Yangilik uchun text
+                </p>
+                <div>
+                  <i class="bi bi-clock-history" style="font-size: 18px; color: #106eea; margin-right: 5px;"></i>
+                  <span style="color: #000" th:text = "${news.date}">01.10.2022</span>
+                </div>
+              </div>
+              <div class="my-2">
+                <a th:href="@{/news}" class="py-1 text-center" id="b-b" style="background: #106eea; color: white;">Batafsil</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Yangiliklar Section -->
+
+    <!-- ======= Biz haqimiszda Section ======= -->
+    <section id="about" class=" mb-5" style="max-height: 2500px;">
+      <div class="container" data-aos="fade-up">
+        <header class="section-header1">
+          <h2>Biz haqimizda</h2>
+        </header>
+
+
+          <div class="row border p-4 mb-5" style="" th:each = "about : ${AboutUs}">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+              <h2 th:text = "${about.mavzu}">Sarlavha</h2>
+              <p style="height: 365px; overflow: hidden;" th:text = "${about.malumot}">
+              </p>
+              <div>
+                <a th:href="@{/about/us}" id="b-b" style="background: #106eea; border-radius: 5px; color: #fff"
+                   class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center py-2">
+                  <span>Batafsil malumot</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-6 img mt-md-3 mt-sm-3 d-lg-block mt-2">
+              <img th:src="@{${'/image/about/'+about.id}}" class="card-img-top" alt="yangilik uchun rasm!">
+            </div>
+          </div>
+
+
+      </div>
+    </section>
+    <!-- End biz haqimizda Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+
+      <div class="container">
+
+        <header class="section-header1" >
+          <h2>Biz bilang bog'lanish</h2>
+        </header>
+        <div class="row gy-4">
+          <div class="col-lg-12">
+            <div class="row gy-4 text-center"   th:each = "xizmat : ${Xizmatlar}" >
+              <div class="col-md-6" id="cardfill">
+                <div class="info-box">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Manzil</h3>
+                  <p th:text = "${xizmat.manzil}" ></p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Telefon</h3>
+                  <p th:text = "${xizmat.telefon}">+1 5589 55488 55</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email</h3>
+                  <p th:text = "${xizmat.email}">info@example.com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-clock"></i>
+                  <h3 >Xizmat ko'rsatish</h3>
+                  <p th:text = "${xizmat.kuni}">Dushanba - Juma</p>
+                  <p th:text = "${xizmat.vaqi}">9:00 - 17:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    <!-- End Contact Section -->
+
+  </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>mirzacholakm<span>.uz</span></h3>
+            <p>
+              Mirzacho‘l tumani<br>
+              Mustaqillik MFY<br>
+              O‘zbekiston ko‘chasi, 29-uy <br><br>
+              <strong>Phone:</strong> +998 (99) 777 48-93<br>
+              <strong>Email:</strong> mirzachol_akm@natlib.uz<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Foydali havolalar</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a th:href="@{/home}">Bosh sahifa</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a th:href="@{/books}">Kitoblar</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a th:href="@{/news}">Yangiliklar</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a th:href="@{/about}">Biz haqimizda</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a th:href="@{/cantact}">Biz bilan aloqa qiling</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Bo'limlar</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a th:href="@{/abonement-va-foydalanuvchilarga-xizmat-korsatish-xizmati}">Abonement va foydalanuvchilarga xizmat ko‘rsatish xizmati</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a th:href="@{/axborot-bibliografiya-xizmati}">Axborot-bibliografiya xizmati</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a th:href="@{/fondlarni-toldirish-saqlash-ishlov-berish-xizmati}">Fondlarni to‘ldirish, saqlash ishlov berish xizmati</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a th:href="@{/axborot-kommunikatsiya-texnalogiyalari-va-raqamlashtirish-xizmati}">Axborot kommunikatsiya texnalogiyalari va raqamlashtirish xizmati</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Bizning ijtimoiy tarmoqlarimiz</h4>
+            <p>Biz ijtimoiy tarmoqlarimiz orqali kuzatib boring
+            </p>
+            <div class="social-links mt-3">
+              <a href="https://www.youtube.com/channel/UCtPS7RSE10r2691hIdOkQQg/featured" class="twitter"><i class="bx bxl-youtube"></i></a>
+              <a href="https://www.facebook.com/groups/2783414248651805/?ref=share" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/mirzachol_akm?r=nametag" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="https://t.me/MT_AKM" class="google-plus"><i class="bx bxl-telegram"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright1 text-center">
+        <p style="font-size: 12px;">Barcha materiallar www.mirzacholakm.uz saytiga tegishli bolib O‘zbekiston Respublikasi "Mualliflik huquqlari va turdosh huquqlari" qonuni bilan himoyalangan.</p>
+        &copy; <strong><span>mirzacholakm.uz</span> 2022</strong>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script th:src="@{/assets/js/main.js}"></script>
+
+</body>
+
+</html>

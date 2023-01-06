@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Mirzacho'l Axborot-kutubxona markazi | Parol</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+  <link rel="stylesheet" th:href="@{/css/all.min.css}">
+
+  <link rel="stylesheet" th:href="@{/css/test.min.css}">
+
+  <!-- Favicons -->
+  <link href="assets1/img/favicon.png" rel="icon">
+  <link href="assets1/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets1/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets1/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets1/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets1/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets1/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets1/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets1/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets1/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a th:href="@{/admin}" class="logo d-flex align-items-center">
+<!--        <img src="assets1/img/logo.png" alt="">-->
+        <span class="d-none d-lg-block">mirzacholakm.uz</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar text-center text-primary">
+     <h3>Parol boshqaruv oynasi</h3>
+    </div><!-- End Search Bar -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed " th:href="@{/admin}">-->
+<!--          <i class="bi bi-grid "></i>-->
+<!--          <span>Boshqaruv paneli</span>-->
+<!--        </a>-->
+<!--      </li>-->
+      <!-- End Dashboard Nav -->
+
+      <li class="nav-heading">Pages</li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/addbook}">
+          <i class="bi bi-bookmarks-fill"></i>
+          <span>Elektron kitoblar</span>
+        </a>
+      </li>
+      <!-- End Profile Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/ijara/books}">
+          <i class="bi bi-calendar-date-fill"></i>
+          <span>Ijara kitoblar</span>
+        </a>
+      </li>
+      <!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/qr/books}">
+          <i class="bi bi-qr-code-scan"></i>
+          <span>QR kodli kitoblar</span>
+        </a>
+      </li>
+      <!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/addNew}">
+          <i class="bi bi-globe2"></i>
+          <span>Yangiliklar</span>
+        </a>
+      </li>
+
+      <!-- End Contact Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/bolim/one}">
+          <i class="bi bi-journal-text"></i>
+          <span>Bo'limlar</span>
+        </a>
+      </li>
+
+      <!-- End Components Nav -->
+
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">-->
+<!--          <i class="bi bi-journal-text"></i><span>Bo'limlar</span><i class="bi bi-chevron-down ms-auto"></i>-->
+<!--        </a>-->
+<!--        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">-->
+<!--          <li>-->
+<!--            <a th:href="@{/bolim/one}">-->
+<!--              <i class="bi bi-circle"></i><span>Abonement va foydalanuvchilarga xizmat ko‘rsatish xizmati</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a th:href="@{/bolim/two}">-->
+<!--              <i class="bi bi-circle"></i><span>Axborot-bibliografiya xizmati</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a th:href="@{/bolim/three}">-->
+<!--              <i class="bi bi-circle"></i><span>Fondlarni to‘ldirish, saqlash ishlov berish xizmati</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a th:href="@{/bolim/four}">-->
+<!--              <i class="bi bi-circle"></i><span>Axborot kommunikatsiya texnalogiyalari va raqamlashtirish xizmati</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </li>&lt;!&ndash; End Forms Nav &ndash;&gt;-->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/tadbirlar}">
+          <i class="bi bi-calendar-event-fill"></i>
+          <span>Tadbirlar</span>
+        </a>
+      </li>
+      <!-- End Contact Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/contact-us-panel}">
+          <i class="bi bi-geo-alt"></i>
+          <span>Manzil</span>
+        </a>
+      </li><!-- End Biz bilan bog'lanish Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/about-uz-panel}">
+          <i class="bi bi-microsoft-teams"></i>
+          <span>Biz haqimizda</span>
+        </a>
+      </li>
+      <!-- End Biz haqimizda Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/users}">
+          <i class="bi bi-microsoft-teams"></i>
+          <span>Users</span>
+        </a>
+      </li>
+      <!-- End Users Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/ijaraberilgan}">
+          <i class="bi bi-microsoft-teams"></i>
+          <span>Ijaraga berilgan kitoblar</span>
+        </a>
+      </li>
+      <!-- End Users Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed bg-primary text-white" th:href="@{/parol}">
+          <i class="bi bi-key-fill text-white"></i>
+          <span>Parol</span>
+        </a>
+      </li>
+    </ul>
+  </aside>
+  <!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Parol boshqaruv</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="">Home</a></li>
+          <li class="breadcrumb-item active">Parol boshqaruv</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- End Page Title -->
+
+    <!-- =================== go jadval ==================== -->
+
+    <section id="jadval">
+      <div class="row">
+        <div class="headers text-center text-primary mb-2">
+          <h2>Parol</h2>
+        </div>
+        <div class="col-lg-12" >
+          <button  class="btn btn-primary my-3" id="btnQoshish" data-bs-toggle="modal" data-bs-target="#insert">Manzil kiritish<i class="bi bi-plus-circle m-2"></i></button>
+          <div class="scrols" style="overflow-x: scroll; max-width: 100%; min-width: 300px;">
+            <table class="table table-bordered border-primary mr-5 text-center" id="table1"
+                   style="min-width: max-content;">
+              <thead>
+              <tr class="bg-primary text-white">
+                <th scope="col">id</th>
+                <th scope="col">username</th>
+                <th scope="col">password</th>
+                <th scope="col">Tahirlash</th>
+<!--                <th scope="col">O'chirish</th>-->
+              </tr>
+              </thead>
+              <tbody id="tbody">
+
+              <tr th:each = "login1:${LoginFull}">
+                <td th:text = "${login1.id}">1</td>
+                <td th:text = "${login1.username}">user</td>
+                <td th:text = "${login1.password}">parol</td>
+                <td>
+                  <button class="btn btn-success px-3 mx-3" data-bs-toggle="modal" data-bs-target="#editModal" id="editButton1">
+                    <i class="bi bi-pencil-square"></i> Tahirlash
+                  </button>
+                </td>
+<!--                <td>-->
+<!--                  <button class="btn btn-danger px-3 mx-3" id="deleteButton">-->
+<!--                    <i class="bi bi-trash3-fill mr-2"></i> O'chirish-->
+<!--                  </button>-->
+<!--                </td>-->
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== end jadval ==================== -->
+
+    <!-- ======================= Qo'shish Modal ================== -->
+
+    <div class="modal fade " id="insert" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+         aria-labelledby="staticBackdropLabel" aria-hidden="true" style="box-shadow: 50px 50px 100px rgba(0 ,0,0,0);">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-primary">Manzil qo'shish</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="qoshishText">
+            <form id="formInsert">
+              <div class="row">
+
+                <div class="col-12">
+                  <div class="user my-3 text-left">
+                    <label class="text-primary">- Username</label>
+                    <div class="input-group">
+                      <input class="form-control" type="email" id="username" name="username" placeholder="Usernameni kiriting!"
+                             required>
+                    </div>
+                  </div>
+                  <div class="user my-3 text-left">
+                    <label class="text-primary">- Password!</label>
+                    <div class="input-group">
+                      <input class="form-control" type="text" id="password" name="password" placeholder="Passwordni kiriting" required>
+                    </div>
+                  </div>
+                  <div class="user my-3 text-left">
+                    <label class="text-primary">- Passwordni tasdiqlang!</label>
+                    <div class="input-group">
+                      <input class="form-control" type="text" id="takPassword" name="takPassword" placeholder="Tasdiqlash passwordni kiriting!" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <small class="ml-3 text-danger text-left" id="insertError"></small>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="close2" data-bs-dismiss="modal" >Yopish</button>
+            <button type="button" class="btn btn-primary" id="qoshBtn">Qo`shish</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================= end Edit Modal ================== -->
+    <!-- ======================= Qo'shish Modal ================== -->
+
+    <div class="modal fade" id="editModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+         aria-labelledby="staticBackdropLabel" aria-hidden="true" style="box-shadow: 50px 50px 100px rgba(0 ,0,0,0);">
+      <div class="modal-dialog  modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-primary">Parol tahirlash</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="editText">
+            <form id="formEditLogin">
+              <div class="row">
+                <input type="text" style="display: none" id="idEdit12" name="idEdit12">
+                <input type="text" style="display: none" id="editUser12" name="editUser12">
+                <div class="col-12">
+                  <div class="user my-3 text-left">
+                    <label class="text-primary">- Username</label>
+                    <div class="input-group">
+                      <input class="form-control" type="text" id="editUsername" name="editUsername" placeholder="Usernameni kiriting!" disabled required>
+                    </div>
+                  </div>
+                  <div class="user my-3 text-left">
+                    <label class="text-primary">- Password!</label>
+                    <div class="input-group">
+                      <input class="form-control" type="text" id="editPassword" name="editPassword" placeholder="Passwordni kiriting" required>
+                    </div>
+                  </div>
+                  <div class="user my-3 text-left">
+                    <label class="text-primary">- Tasdqilash password!</label>
+                    <div class="input-group">
+                      <input class="form-control" type="text" id="editTasPassword" name="editTasPassword" placeholder="Tasdqilash passwordni kiriting!" required>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </form>
+            <small class="ml-3 text-danger text-left" id="editError"></small>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="editClose" data-bs-dismiss="modal" >Yopish</button>
+            <button type="button" class="btn btn-primary" id="editBtnParol">Tahirlash</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== delete modal ======================== -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; <strong><span>mirzacholakm.uz 2022</span></strong>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script th:src="@{/js/jquery.min.js}"></script>
+
+  <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+
+  <script th:src="@{/js/test.min.js}"></script>
+
+  <script th:src="@{/js/demo.js}"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <!-- Vendor JS Files -->
+  <script src="assets1/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets1/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets1/vendor/chart.js/chart.min.js"></script>
+  <script src="assets1/vendor/echarts/echarts.min.js"></script>
+  <script src="assets1/vendor/quill/quill.min.js"></script>
+  <script src="assets1/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets1/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets1/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets1/js/main.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script type="text/javascript">
+    var baseUrl = window.location.origin;
+
+    var dataDelete
+
+    $("#table1").on("click","tbody tr #deleteButton", function (e){
+      $tr=$(this).closest('tr');
+      dataDelete = $tr.children("td").map(function (){
+        return $(this).text();
+      }).get();
+    });
+
+    $(document).ready(function (){
+      $(document).on("click","#deleteButton", function (){
+
+        swal({
+          title: "Delete Parol",
+          text: "Malumotlarni o'chirmoqchimisiz!",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
+
+        })
+                .then((willDelete) => {
+                  if (willDelete) {
+                    $.ajax({
+                      url: baseUrl+"/login/delete/"+dataDelete[0]+"",
+                      type: "DELETE",
+                      success: function (data,status,info){
+                         if (info.status=="200"){
+                           window.location = "/parol";
+                         }
+                         else if(info.status=="208"){
+                           swal({
+                             title: "Warning!",
+                             text: data,
+                             icon: "error",
+                             buttons: true,
+                             dangerMode: true,
+                           });
+                         }
+                      },
+                      error: function (error){
+                        swal({
+                          title: "error!",
+                          text: "Malumotlar xato yoki baza bilan bog'lanishda xatolik",
+                          icon: "error",
+                          buttons: true,
+                          dangerMode: true,
+                        });
+                      }
+                    })
+                  }
+                });
+      })
+    })
+
+    $("#table1").on("click","tbody tr #editButton1", function (e){
+      $tr=$(this).closest('tr');
+      var editObject = $tr.children("td").map(function (){
+        return $(this).text();
+      }).get();
+      if (editObject[0]!=null){
+        $('#idEdit12').val(editObject[0])
+        $('#editUsername').val(editObject[1]);
+        $('#editUser12').val(editObject[1]);
+        $('#editPassword').val(editObject[2]);
+        $('#editTasPassword').val(editObject[2]);
+      }
+    });
+
+    $(document).ready(function () {
+      $(document).on("click","#editBtnParol", function (){
+
+        var pass = $('#editPassword').val();
+        var takPass = $('#editTasPassword').val();
+
+        if (pass.length>=8 && takPass.length>=8){
+          if (pass!="" && takPass!=""){
+
+            var from=$('#formEditLogin')[0];
+            var data2=new FormData(from);
+
+            $.ajax({
+              url:baseUrl+"/login/edit",
+              type: 'PUT',
+              enctype: 'multipart/form-data',
+              data: data2,
+              processData: false,
+              contentType: false,
+              cache: false,
+              success: function (data , status , info){
+                if (info.status=="200"){
+                  swal({
+                    title: "Success full",
+                    text: "Parol muvafaqiyatli tahirlandi!",
+                    icon: "success",
+                    buttons: true,
+                    dangerMode: true,
+                  })
+                          .then((willDelete) => {
+                            if (willDelete) {
+                              $("#editModal").modal('hide')
+                              window.location="/parol";
+                            }
+                          });
+                }else if (info.status=="208"){
+                  swal({
+                    title: "Xatolik!",
+                    text: data,
+                    icon: "error",
+                    button: "Yopish",
+                  });
+                  $('#editPassword').val("");
+                  $('#editTasPassword').val("");
+                }
+              },
+              error: function (error){
+                swal({
+                  title: "Error! "+error,
+                  text: "Malimot tahirlanmadi!",
+                  icon: "error",
+                  button: "Yopish",
+                });
+              }
+            })
+          }else {
+
+            swal({
+              title: "Xatolik!",
+              text: "Maydonlarni to'ldiring!",
+              icon: "warning",
+              button: "Yopish",
+            });
+          }
+        }
+        else{
+          swal({
+            title: "Xatolik!",
+            text: "Parol katta harf va raqamlardan tashkil topishi va 8 ta belgi yoki ko'p bo'lishi kerak!",
+            icon: "warning",
+            button: "Yopish",
+          });
+        }
+
+      })
+    })
+
+    $(document).ready(function (){
+      $(document).on("click","#qoshBtn",function (){
+        var username = $('#username').val();
+        var password = $('#password').val();
+        var tasPassword = $('#takPassword').val();
+
+        var b;
+        var abekt = username.split("");
+        for (var i=0; i<=abekt.length; i++){
+          if (abekt[i]=="@"){
+            b=1;
+          }
+        }
+
+        if (username!="" && password!="" && tasPassword!="" ){
+
+          if (b==1){
+            if (password.length>=8 && tasPassword.length>=8){
+              var from=$('#formInsert')[0];
+              var data08=new FormData(from);
+              $.ajax({
+                url:baseUrl+"/login/insert",
+                type: 'POST',
+                enctype: 'multipart/form-data',
+                data: data08,
+                processData: false,
+                contentType: false,
+                cache: false,
+                success: function (data , status , info){
+                  if(info.status=="200"){
+                    swal({
+                      title: "Success Full",
+                      text: "Parol muvaffaqiyatli joylandi!",
+                      icon: "success",
+                      buttons: true,
+                      dangerMode: true,
+                    })
+                            .then((willDelete) => {
+                              if (willDelete) {
+                                clearBook();
+                                $("#insert").modal('hide')
+                                window.location = "/parol";
+                              }
+                            });
+                  }
+                  else if(info.status=="208"){
+                    swal({
+                      title: "Warning!",
+                      text: data,
+                      icon: "warning",
+                      buttons: true,
+                      dangerMode: true,
+                    });
+                  }
+                },
+                error: function (error){
+                  swal({
+                    title: "error!",
+                    text: "Malumotlar xato yoki baza bilan bog'lanishda xatolik",
+                    icon: "error",
+                    buttons: true,
+                    dangerMode: true,
+                  });
+                }
+              })
+            }else{
+              swal({
+                title: "Warning",
+                text: "Parol katta harf va raqamlardan tashkil topishi va 8 ta belgi yoki ko'p bo'lishi kerak!",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+              });
+            }
+          }else{
+            swal({
+              title: "Warning",
+              text: " Username maydonchasida xatolik!",
+              icon: "warning",
+              buttons: true,
+              dangerMode: true,
+            });
+          }
+
+
+        }else{
+          swal({
+            title: "Warning",
+            text: "Maydonlarni to'ldiring!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          });
+        }
+
+      })
+    })
+
+    function clearBook(){
+      $('#username').val("");
+      $('#password').val("");
+      $('#takPassword').val("");
+    }
+
+  </script>
+</body>
+
+</html>

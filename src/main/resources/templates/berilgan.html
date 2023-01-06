@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Mirzacho'l Axborot-kutubxona markazi | Ijara berilgan kitoblar</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+  <link rel="stylesheet" th:href="@{/css/all.min.css}">
+
+  <link rel="stylesheet" th:href="@{/css/test.min.css}">
+
+  <!-- Favicons -->
+  <link href="assets1/img/favicon.png" rel="icon">
+  <link href="assets1/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets1/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets1/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets1/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets1/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets1/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets1/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets1/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets1/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a th:href="@{/admin}" class="logo d-flex align-items-center">
+<!--        <img src="assets1/img/logo.png" alt="">-->
+        <span class="d-none d-lg-block">mirzacholakm.uz</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar text-center text-primary">
+     <h3>Ijara berilgan kitoblar oynasi</h3>
+    </div><!-- End Search Bar -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed " th:href="@{/admin}">-->
+<!--          <i class="bi bi-grid"></i>-->
+<!--          <span>Boshqaruv paneli</span>-->
+<!--        </a>-->
+<!--      </li>-->
+      <!-- End Dashboard Nav -->
+
+      <li class="nav-heading">Pages</li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed " th:href="@{/addbook}">
+          <i class="bi bi-bookmarks-fill "></i>
+          <span>Elektron kitoblar</span>
+        </a>
+      </li>
+      <!-- End Profile Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/ijara/books}">
+          <i class="bi bi-calendar-date-fill"></i>
+          <span>Ijara kitoblar</span>
+        </a>
+      </li>
+      <!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/qr/books}">
+          <i class="bi bi-qr-code-scan"></i>
+          <span>QR kodli kitoblar</span>
+        </a>
+      </li>
+      <!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/addNew}">
+          <i class="bi bi-globe2"></i>
+          <span>Yangiliklar</span>
+        </a>
+      </li>
+
+      <!-- End Contact Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/bolim/one}">
+          <i class="bi bi-journal-text"></i>
+          <span>Bo'limlar</span>
+        </a>
+      </li>
+
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link collapsed " data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">-->
+<!--          <i class="bi bi-journal-text "></i><span>Bo'limlar</span><i class="bi bi-chevron-down ms-auto"></i>-->
+<!--        </a>-->
+<!--        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">-->
+<!--          <li>-->
+<!--            <a th:href="@{/bolim/one}">-->
+<!--              <i class="bi bi-circle"></i><span>Abonement va foydalanuvchilarga xizmat ko‘rsatish xizmati</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a th:href="@{/bolim/two}">-->
+<!--              <i class="bi bi-circle"></i><span>Axborot-bibliografiya xizmati</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a th:href="@{/bolim/three}">-->
+<!--              <i class="bi bi-circle"></i><span>Fondlarni to‘ldirish, saqlash ishlov berish xizmati</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a th:href="@{/bolim/four}">-->
+<!--              <i class="bi bi-circle"></i><span>Axborot kommunikatsiya texnalogiyalari va raqamlashtirish xizmati</span>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </li>-->
+      <!-- End Forms Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed " th:href="@{/tadbirlar}">
+          <i class="bi bi-calendar-event-fill "></i>
+          <span>Tadbirlar</span>
+        </a>
+      </li>
+      <!-- End Contact Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/contact-us-panel}">
+          <i class="bi bi-geo-alt"></i>
+          <span>Manzil</span>
+        </a>
+      </li><!-- End Biz bilan bog'lanish Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/about-uz-panel}">
+          <i class="bi bi-microsoft-teams"></i>
+          <span>Biz haqimizda</span>
+        </a>
+      </li>
+      <!-- End Biz haqimizda Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" th:href="@{/users}">
+          <i class="bi bi-microsoft-teams"></i>
+          <span>Users</span>
+        </a>
+      </li>
+      <!-- End Users Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed bg-primary text-white" th:href="@{/ijaraberilgan}">
+          <i class="bi bi-microsoft-teams text-white"></i>
+          <span>Ijaraga berilgan kitoblar</span>
+        </a>
+      </li>
+      <!-- End Users Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed " th:href="@{/parol}">
+          <i class="bi bi-key-fill "></i>
+          <span>Parol</span>
+        </a>
+      </li>
+    </ul>
+  </aside>
+  <!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Ijara berilgan kitoblar</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="">Home</a></li>
+          <li class="breadcrumb-item active">Ijara berilgan kitoblar</li>
+        </ol>
+      </nav>
+    </div>
+    <!-- End Page Title -->
+
+    <section id="jadval">
+      <div class="row">
+        <div class="headers text-center text-primary mb-2">
+          <h2>Ijaraga berish!</h2>
+        </div>
+        <div class="col-lg-12" >
+<!--          <button  class="btn btn-primary my-3" id="btnQoshish" data-bs-toggle="modal" data-bs-target="#insert">Manzil kiritish<i class="bi bi-plus-circle m-2"></i></button>-->
+          <div class="scrols" style="overflow-x: scroll; max-width: 100%; min-width: 500px;">
+            <form id="formData">
+            <table class="table table-bordered border-primary mr-5 text-center" id="table1"
+                   style="min-width: max-content;">
+              <thead>
+              <tr class="bg-primary text-white">
+                <th scope="col">id</th>
+                <th scope="col">Ism / Familya</th>
+                <th scope="col">Seriya / Raqami</th>
+                <th scope="col">Telefon</th>
+                <th scope="col">Kitob nomi</th>
+                <th scope="col">Kitob mualifi</th>
+                <th scope="col">Berildi</th>
+                <th scope="col">Berilgan vaqti</th>
+                <th scope="col">Olindi</th>
+                <th scope="col">Olingan vaqti</th>
+                <th scope="col">Mudat</th>
+              </tr>
+
+              </thead>
+              <tbody id="tbody">
+              <tr th:each = "rents : ${Rents}">
+                <td th:text = "${rents.id}"></td>
+                <td th:text = "${rents.ismvsfamilya}"></td>
+                <td th:text = "${rents.seriya}"></td>
+                <td th:text = "${rents.telefon}"></td>
+                <td th:text = "${rents.kitobNomi}"></td>
+                <td th:text = "${rents.kitobMualifi}"></td>
+
+                <td>
+                  <input type="checkbox" id="berildiCheked" th:checked="*{rents.berildi}">
+                </td>
+
+                <td th:text = "${rents.berilganVaqt}"></td>
+
+                <td>
+                  <input type="checkbox" id="qaytarildiCheked" th:checked="*{rents.olindi}">
+                </td>
+
+
+                <td th:text = "${rents.olinganVaqt}"></td>
+                <td th:text = "${rents.mudat}"></td>
+
+
+
+              </tr>
+              <input type="text" style="display: none" name="mudatEdit" id="mudatEdit">
+              <input type="text" style="display: none" name="idEdit"  id="idEdit">
+              </tbody>
+            </table>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="editModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+           aria-labelledby="staticBackdropLabel" aria-hidden="true" style="box-shadow: 50px 50px 100px rgba(0 ,0,0,0);">
+        <div class="modal-dialog  modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-primary">Ijaraga berish</h5>
+              <button type="button" id="btn-close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="editText">
+              <form id="editForm4">
+                <div class="row">
+
+                  <input type="text" style="display: none" id="editId12" name="editId12">
+
+                  <div class="col-lg-6">
+                    <div class="user my-3 text-left">
+                      <label class="text-primary">- Kitob nomi!</label>
+                      <div class="input-group">
+                        <input class="form-control" type="text" id="kitobNomi" name="kitobNomi"  required disabled>
+                      </div>
+                    </div>
+                    <div class="user my-3 text-left">
+                      <label class="text-primary">- Kitob muallifi!</label>
+                      <div class="input-group">
+                        <input class="form-control" type="text" id="kitobMualifi" name="kitobMualifi" required disabled>
+                      </div>
+                    </div>
+                    <div class="user my-3 text-left">
+                      <label class="text-primary">- Ijaraga berilgan sana!</label>
+                      <div class="input-group">
+                        <input class="form-control text-center border border-success text-success" type="text" style="font-size: 40px; padding: 50px;" disabled id="berilganSana" name="berilganSana" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="user my-3 text-left">
+                      <label class="text-primary">- Ism / Familya!</label>
+                      <div class="input-group">
+                        <input class="form-control" type="text" id="ismvsfam" name="muallifEdit" required disabled>
+                      </div>
+                    </div>
+
+                    <div class="user my-3 text-left">
+                      <label class="text-primary">- Ijara mudati!</label>
+                      <div class="input-group">
+                        <input class="form-control" type="text" id="mudat" name="mudat" required disabled>
+                      </div>
+                    </div>
+
+                    <div class="user my-3 text-left">
+                      <label class="text-primary">- Ijara qaytarish sana!</label>
+                      <div class="input-group">
+                        <input class="form-control text-center text-danger border border-danger" type="text" style="font-size: 40px; padding: 50px;" disabled id="qaytarilganSana" name="qaytarilganSana" required>
+                      </div>
+                    </div>
+
+                    <input type="text" style="display: none" id="editId1" name="editId10">
+                    <input type="text" style="display: none" id="qaytarish" name="qaytarish">
+                    <input type="text" style="display: none" id="berish" name="berish">
+
+                  </div>
+                </div>
+              </form>
+              <small class="ml-3 text-danger text-left" id="editError"></small>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" id="editClose" data-bs-dismiss="modal" >Yopish</button>
+              <button type="button" class="btn btn-primary px-4" id="saqlashBtn">Saqlash</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <form id="formID12">
+        <input type="text" id="input123" style="display: none" name="inputaid">
+      </form>
+    </section>
+    <hr class="my-5">
+    <section>
+      <section id="jadval24 mt-5">
+        <div class="row">
+          <div class="headers text-center text-primary mb-2">
+            <h2>Ijaraga berilgan kitoblar!</h2>
+          </div>
+          <div class="col-lg-12" >
+            <!--          <button  class="btn btn-primary my-3" id="btnQoshish" data-bs-toggle="modal" data-bs-target="#insert">Manzil kiritish<i class="bi bi-plus-circle m-2"></i></button>-->
+            <div class="scrols" style="overflow-x: scroll; max-width: 100%; min-width: 500px;">
+              <form id="formData20">
+                <table class="table table-bordered border-primary mr-5 text-center" id="table10"
+                       style="min-width: max-content;">
+                  <thead>
+                  <tr class="bg-primary text-white">
+                    <th scope="col">id</th>
+                    <th scope="col">Ism / Familya</th>
+                    <th scope="col">Seriya / Raqami</th>
+                    <th scope="col">Telefon</th>
+                    <th scope="col">Kitob nomi</th>
+                    <th scope="col">Kitob mualifi</th>
+                    <th scope="col">Berildi</th>
+                    <th scope="col">Berilgan vaqti</th>
+                    <th scope="col">Olindi</th>
+                    <th scope="col">Olingan vaqti</th>
+                    <th scope="col">Mudat</th>
+                  </tr>
+
+                  </thead>
+                  <tbody id="tbody10">
+                  <tr th:each = "rents : ${Qorzinka}">
+                    <td th:text = "${rents.id}"></td>
+                    <td th:text = "${rents.ismvsfamilya}"></td>
+                    <td th:text = "${rents.seriya}"></td>
+                    <td th:text = "${rents.telefon}"></td>
+                    <td th:text = "${rents.kitobNomi}"></td>
+                    <td th:text = "${rents.kitobMualifi}"></td>
+
+                    <td>
+                      <input type="checkbox" disabled id="berildiCheked1" th:checked="*{rents.berildi}">
+                    </td>
+
+                    <td th:text = "${rents.berilganVaqt}"></td>
+
+                    <td>
+                      <input type="checkbox" disabled id="qaytarildiCheked1" th:checked="*{rents.olindi}">
+                    </td>
+
+
+                    <td th:text = "${rents.olinganVaqt}"></td>
+                    <td th:text = "${rents.mudat}"></td>
+
+
+
+                  </tr>
+                  <input type="text" style="display: none" name="mudatEdit" id="mudatEdit">
+                  <input type="text" style="display: none" name="idEdit"  id="idEdit">
+                  </tbody>
+                </table>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="editModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+             aria-labelledby="staticBackdropLabel" aria-hidden="true" style="box-shadow: 50px 50px 100px rgba(0 ,0,0,0);">
+          <div class="modal-dialog  modal-xl">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-primary">Ijaraga berish</h5>
+                <button type="button" id="btn-close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body" id="editText">
+                <form id="editForm4">
+                  <div class="row">
+
+                    <input type="text" style="display: none" id="editId12" name="editId12">
+
+                    <div class="col-lg-6">
+                      <div class="user my-3 text-left">
+                        <label class="text-primary">- Kitob nomi!</label>
+                        <div class="input-group">
+                          <input class="form-control" type="text" id="kitobNomi" name="kitobNomi"  required disabled>
+                        </div>
+                      </div>
+                      <div class="user my-3 text-left">
+                        <label class="text-primary">- Kitob muallifi!</label>
+                        <div class="input-group">
+                          <input class="form-control" type="text" id="kitobMualifi" name="kitobMualifi" required disabled>
+                        </div>
+                      </div>
+                      <div class="user my-3 text-left">
+                        <label class="text-primary">- Ijaraga berilgan sana!</label>
+                        <div class="input-group">
+                          <input class="form-control text-center border border-success text-success" type="text" style="font-size: 40px; padding: 50px;" disabled id="berilganSana" name="berilganSana" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="user my-3 text-left">
+                        <label class="text-primary">- Ism / Familya!</label>
+                        <div class="input-group">
+                          <input class="form-control" type="text" id="ismvsfam" name="muallifEdit" required disabled>
+                        </div>
+                      </div>
+
+                      <div class="user my-3 text-left">
+                        <label class="text-primary">- Ijara mudati!</label>
+                        <div class="input-group">
+                          <input class="form-control" type="text" id="mudat" name="mudat" required disabled>
+                        </div>
+                      </div>
+
+                      <div class="user my-3 text-left">
+                        <label class="text-primary">- Ijara qaytarish sana!</label>
+                        <div class="input-group">
+                          <input class="form-control text-center text-danger border border-danger" type="text" style="font-size: 40px; padding: 50px;" disabled id="qaytarilganSana" name="qaytarilganSana" required>
+                        </div>
+                      </div>
+
+                      <input type="text" style="display: none" id="editId1" name="editId10">
+                      <input type="text" style="display: none" id="qaytarish" name="qaytarish">
+                      <input type="text" style="display: none" id="berish" name="berish">
+
+                    </div>
+                  </div>
+                </form>
+                <small class="ml-3 text-danger text-left" id="editError"></small>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="editClose" data-bs-dismiss="modal" >Yopish</button>
+                <button type="button" class="btn btn-primary px-4" id="saqlashBtn">Saqlash</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <hr class="my-5">
+    <section id="jadval2 mt-5">
+<!--      <div class="row">-->
+<!--        <div class="headers text-center text-primary mb-2">-->
+<!--          <h2>Ijaraga olganlar</h2>-->
+<!--        </div>-->
+<!--        <div class="col-lg-12" >-->
+<!--          &lt;!&ndash;          <button  class="btn btn-primary my-3" id="btnQoshish" data-bs-toggle="modal" data-bs-target="#insert">Manzil kiritish<i class="bi bi-plus-circle m-2"></i></button>&ndash;&gt;-->
+<!--          <div class="scrols" style="overflow-x: scroll; overflow-y: scroll; max-width: 100%; min-width: 500px; min-height: 200px; max-height: 600px;">-->
+<!--            <form id="form2">-->
+<!--              <table class="table table-bordered border-primary mr-5 text-center" id="table1"-->
+<!--                     style="min-width: max-content;">-->
+<!--                <thead>-->
+<!--                <tr class="bg-primary text-white">-->
+<!--                  <th scope="col">id</th>-->
+<!--                  <th scope="col">Ism / Familya</th>-->
+<!--                  <th scope="col">Seriya / Raqami</th>-->
+<!--                  <th scope="col">Telefon</th>-->
+<!--                  <th scope="col">Kitob nomi</th>-->
+<!--                  <th scope="col">Kitob mualifi</th>-->
+<!--                  <th scope="col">Berildi</th>-->
+<!--                  <th scope="col">Berilgan vaqti</th>-->
+<!--                  <th scope="col">Olindi</th>-->
+<!--                  <th scope="col">Olingan vaqti</th>-->
+<!--                  <th scope="col">Mudat</th>-->
+<!--                </tr>-->
+
+<!--                </thead>-->
+<!--                <tbody id="tbody1">-->
+<!--                <tr th:each = "rents : ${Rents}">-->
+<!--                  <td th:text = "${rents.id}"></td>-->
+<!--                  <td th:text = "${rents.ismvsfamilya}"></td>-->
+<!--                  <td th:text = "${rents.seriya}"></td>-->
+<!--                  <td th:text = "${rents.telefon}"></td>-->
+<!--                  <td th:text = "${rents.kitobNomi}"></td>-->
+<!--                  <td th:text = "${rents.kitobMualifi}"></td>-->
+<!--                  <td>-->
+<!--                    <input type="checkbox" id="berildiCheked12" disabled th:checked="*{rents.berildi}">-->
+<!--                  </td>-->
+
+<!--                  <td th:text = "${rents.berilganVaqt}"></td>-->
+
+<!--                  <td>-->
+<!--                    <input type="checkbox" id="qaytarildiCheked12" disabled th:checked="*{rents.olindi}">-->
+<!--                  </td>-->
+<!--                  <td th:text = "${rents.olinganVaqt}"></td>-->
+<!--                  <td th:text = "${rents.mudat}"></td>-->
+<!--                  -->
+<!--                  <input type="text" style="display: block" name="mudatEdit" id="mudatEdit1">-->
+<!--                  <input type="text" style="display: block" name="idEdit"  id="idEdit1">-->
+<!--                  -->
+<!--                </tr>-->
+
+<!--                </tbody>-->
+<!--              </table>-->
+<!--            </form>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div class="modal fade" id="editModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"-->
+<!--           aria-labelledby="staticBackdropLabel" aria-hidden="true" style="box-shadow: 50px 50px 100px rgba(0 ,0,0,0);">-->
+<!--        <div class="modal-dialog  modal-xl">-->
+<!--          <div class="modal-content">-->
+<!--            <div class="modal-header">-->
+<!--              <h5 class="modal-title text-primary">Ijaraga berish</h5>-->
+<!--              <button type="button" id="btn-close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+<!--            </div>-->
+<!--            <div class="modal-body" id="editText">-->
+<!--              <form id="editForm4">-->
+<!--                <div class="row">-->
+
+<!--                  <input type="text" style="display: none" id="editId12" name="editId12">-->
+
+<!--                  <div class="col-lg-6">-->
+<!--                    <div class="user my-3 text-left">-->
+<!--                      <label class="text-primary">- Kitob nomi!</label>-->
+<!--                      <div class="input-group">-->
+<!--                        <input class="form-control" type="text" id="kitobNomi" name="kitobNomi"  required disabled>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="user my-3 text-left">-->
+<!--                      <label class="text-primary">- Kitob muallifi!</label>-->
+<!--                      <div class="input-group">-->
+<!--                        <input class="form-control" type="text" id="kitobMualifi" name="kitobMualifi" required disabled>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="user my-3 text-left">-->
+<!--                      <label class="text-primary">- Ijaraga berilgan sana!</label>-->
+<!--                      <div class="input-group">-->
+<!--                        <input class="form-control text-center border border-success text-success" type="text" style="font-size: 40px; padding: 50px;" disabled id="berilganSana" name="berilganSana" required>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="col-lg-6">-->
+<!--                    <div class="user my-3 text-left">-->
+<!--                      <label class="text-primary">- Ism / Familya!</label>-->
+<!--                      <div class="input-group">-->
+<!--                        <input class="form-control" type="text" id="ismvsfam" name="muallifEdit" required disabled>-->
+<!--                      </div>-->
+<!--                    </div>-->
+
+<!--                    <div class="user my-3 text-left">-->
+<!--                      <label class="text-primary">- Ijara mudati!</label>-->
+<!--                      <div class="input-group">-->
+<!--                        <input class="form-control" type="text" id="mudat" name="mudat" required disabled>-->
+<!--                      </div>-->
+<!--                    </div>-->
+
+<!--                    <div class="user my-3 text-left">-->
+<!--                      <label class="text-primary">- Ijara qaytarish sana!</label>-->
+<!--                      <div class="input-group">-->
+<!--                        <input class="form-control text-center text-danger border border-danger" type="text" style="font-size: 40px; padding: 50px;" disabled id="qaytarilganSana" name="qaytarilganSana" required>-->
+<!--                      </div>-->
+<!--                    </div>-->
+
+<!--                    <input type="text" style="display: none" id="editId1" name="editId10">-->
+<!--                    <input type="text" style="display: none" id="qaytarish" name="qaytarish">-->
+<!--                    <input type="text" style="display: none" id="berish" name="berish">-->
+
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </form>-->
+<!--              <small class="ml-3 text-danger text-left" id="editError"></small>-->
+<!--            </div>-->
+<!--            <div class="modal-footer">-->
+<!--              <button type="button" class="btn btn-danger" id="editClose" data-bs-dismiss="modal" >Yopish</button>-->
+<!--              <button type="button" class="btn btn-primary px-4" id="saqlashBtn">Saqlash</button>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+    </section>
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; <strong><span>mirzacholakm.uz 2022</span></strong>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script th:src="@{/js/jquery.min.js}"></script>
+
+  <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+
+  <script th:src="@{/js/test.min.js}"></script>
+
+  <script th:src="@{/js/demo.js}"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <!-- Vendor JS Files -->
+  <script src="assets1/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets1/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets1/vendor/chart.js/chart.min.js"></script>
+  <script src="assets1/vendor/echarts/echarts.min.js"></script>
+  <script src="assets1/vendor/quill/quill.min.js"></script>
+  <script src="assets1/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets1/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets1/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets1/js/main.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script type="text/javascript">
+
+    var baseUrl = window.location.origin;
+
+    // $("#table1").on("click","tbody tr #berildiCheked", function (e){
+    //   // var tr = $("#berildiCheked").val();
+    //   // var x = document.getElementById("berildiCheked").checked;
+    //   // alert("sdvgsad "+x)
+    //   // if (x===false){
+    //   //   alert("kirdi")
+    //   //   document.getElementById("berildiCheked").disabled = true;
+    //   // }
+    //
+    //   $tr = $(this).closest('tr');
+    //   var editObject = $tr.children("td").map(function () {
+    //     return $(this).text();
+    //   }).get();
+    //
+    //   var berildiX,olindiY;
+    //
+    //   alert("x+ y = "+editObject[0]);
+    //
+    //   $.ajax({
+    //     url: baseUrl + "/api/true1/"+editObject1[0],
+    //     type: 'GET',
+    //     dataType:"json",
+    //     success:function (data){
+    //       alert("SUCCESS FULL");
+    //     },
+    //     error: function (error){
+    //       alert("hatolik = "+error);
+    //     }
+    //   });
+    //   alert("kirmay oti")
+    // })
+
+
+
+    $("#table1").on("click","tbody tr #berildiCheked", function (e){
+
+      var x = document.getElementById("berildiCheked").checked;
+      var y = document.getElementById("qaytarildiCheked").checked;
+      // alert("x = "+x+y);
+      if (x===true) {
+        // alert("kirdi 1");
+        $tr = $(this).closest('tr');
+        var editObject = $tr.children("td").map(function () {
+          return $(this).text();
+        }).get();
+
+
+        if (editObject[0] != null) {
+          // alert("kirdi 2"+editObject[10]);
+
+          $('#mudatEdit').val(editObject[10]);
+          $('#idEdit').val(editObject[0]);
+
+
+          var from = $('#formData')[0];
+          var data1 = new FormData(from);
+
+          $.ajax({
+            url: baseUrl + "/api/tah",
+            type: 'PUT',
+            enctype: 'multipart/form-data',
+            data: data1,
+            processData: false,
+            contentType: false,
+            cache: false,
+            success: function (data, status, info) {
+              // alert("data = "+data);
+              var a = data.split(",");
+              // alert(a[2]+"  "+a[3]);
+
+              if (a[2]==="false" && a[3]==="false"){
+                $('#editModal').modal('show');
+                $('#kitobNomi').val(editObject[4]);
+                $('#kitobMualifi').val(editObject[5]);
+                $('#ismvsfam').val(editObject[1]);
+                $('#mudat').val(editObject[10]);
+
+                $('#berilganSana').val(a[1]);
+                $('#berish').val(a[1]);
+                $('#qaytarilganSana').val(a[0]);
+                $('#qaytarish').val(a[0]);
+                $('#editId1').val(editObject[0]);
+              }
+              else{
+                swal({
+                  title: "Kitob ijaraga berilgan!",
+                  icon: "warning",
+                  buttons: true,
+                  dangerMode: true,
+                }).then((willDelete) => {
+                  if (willDelete) {
+                    window.location="/ijaraberilgan";
+                  }else{
+                    window.location="/ijaraberilgan";
+                  }
+                });
+              }
+
+
+            },
+            error: function (error) {
+              swal({
+                title: "Error! " + error,
+                text: "Malimot tahirlanmadi!",
+                icon: "error",
+                button: "Yopish",
+              });
+            }
+          })
+
+        }
+      }else{
+        swal({
+          title: "Kitob ijaraga berilgan!",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
+        }).then((willDelete) => {
+          if (willDelete) {
+            window.location="/ijaraberilgan";
+          }else{
+            window.location="/ijaraberilgan";
+          }
+        });
+      }
+    });
+
+    // /api/ii/oo
+
+    $(document).on("click","#saqlashBtn" , function (){
+
+      var from1=$('#editForm4')[0];
+      var data3=new FormData(from1);
+
+      $.ajax({
+        url:baseUrl+"/api/ii/oo",
+        type: 'PUT',
+        enctype: 'multipart/form-data',
+        data: data3,
+        processData: false,
+        contentType: false,
+        cache: false,
+        success: function (data , status , info){
+
+          if (info.status=="200"){
+            swal({
+              title: "Success",
+              text: "Muvafaqiyatli amalga oshirildi!",
+              icon: "success",
+              buttons: true,
+              dangerMode: true,
+            })
+                    .then((willDelete) => {
+                      if (willDelete) {
+                        window.location="/ijaraberilgan";
+                      }else{
+                        window.location="/ijaraberilgan";
+                      }
+                    });
+          }else if (info.status=="208"){
+            swal({
+              title: "Xatolik!",
+              text: "Malimot tahirlanmadi!",
+              icon: "error",
+              button: "Yopish",
+            });
+          }
+        },
+        error: function (error){
+          swal({
+            title: "Error! "+error,
+            text: "Malimot tahirlanmadi!",
+            icon: "error",
+            button: "Yopish",
+          });
+        }
+      })
+
+    })
+
+
+
+    $(document).ready(function (){
+      $(document).on("click","#editClose",function (){
+        window.location="/ijaraberilgan";
+      })
+    })
+
+
+    $(document).ready(function (){
+      $(document).on("click","#btn-close",function (){
+        window.location="/ijaraberilgan";
+      })
+    })
+
+
+    $("#table1").on("click","tbody tr #qaytarildiCheked", function (e){
+
+          $tr = $(this).closest('tr');
+          var editObject1 = $tr.children("td").map(function () {
+            return $(this).text();
+          }).get();
+
+          // alert(
+          //         "edit = "+editObject1[0]
+          // );
+
+                $('#input123').val(3);
+
+                var from = $('#formData')[0];
+                var data1 = new FormData(from);
+
+                $.ajax({
+                  url: baseUrl + "/api/true2/"+editObject1[0],
+                  type: 'PUT',
+                  enctype: 'multipart/form-data',
+                  data: data1,
+                  processData: false,
+                  contentType: false,
+                  cache: false,
+                  success: function (data, status, info) {
+                    if (info.status=="200") {
+                      swal({
+                        title: "Baza bilan bog'lanishda xatolik!",
+                        icon: "warning",
+                        buttons: true,
+                        dangerMode: true,
+                      }).then((willDelete) => {
+                        if (willDelete) {
+                          window.location="/ijaraberilgan";
+                        }else{
+                          window.location="/ijaraberilgan";
+                        }
+                      });
+                    }else if (info.status=="208"){
+                      // alert("208 = "+data);
+
+                      var f = data.split(",");
+                      var berilidi = f[0];
+                      var olindi = f[1];
+
+                      // alert(berilidi+"   "+olindi);
+                      if (berilidi==="true" && olindi==="false"){
+                        // alert("keldi = "+editObject1[0]);
+                        var id = editObject1[0];
+                        // alert("id = "+id);
+                        $('#input123').val(id);
+                        var from1 = $('#formID12')[0];
+                        var data2 = new FormData(from1);
+
+                        $.ajax({
+                          url: baseUrl + "/api/full/true1",
+                          type: 'PUT',
+                          enctype: 'multipart/form-data',
+                          data: data2,
+                          processData: false,
+                          contentType: false,
+                          cache: false,
+                          success: function (data, status, info) {
+
+                            swal({
+                              title: "Ijarachi kitobni qaytardimi?",
+                              icon: "warning",
+                              buttons: true,
+                              dangerMode: true,
+                            }).then((willDelete) => {
+                              if (willDelete) {
+                                window.location="/ijaraberilgan";
+                              }else{
+                                window.location="/ijaraberilgan";
+                              }
+                            });
+                          },
+                          error: function (error){
+                            console.log(error)
+                            swal({
+                              title: "Baza bilan bog'lanishda xatolik!",
+                              icon: "warning",
+                              buttons: true,
+                              dangerMode: true,
+                            }).then((willDelete) => {
+                              if (willDelete) {
+                                window.location="/ijaraberilgan";
+                              }else{
+                                window.location="/ijaraberilgan";
+                              }
+                            });
+                          }
+                        });
+
+
+
+                      } if (berilidi==="false" && olindi==="false"){
+                        swal({
+                          title: "Ijaraga berilmagan!",
+                          icon: "warning",
+                          buttons: true,
+                          dangerMode: true,
+                        }).then((willDelete) => {
+                          if (willDelete) {
+                            window.location="/ijaraberilgan";
+                          }else{
+                            window.location="/ijaraberilgan";
+                          }
+                        });
+                      }
+                      else{
+                        swal({
+                          title: "Ijarachidan qaytarip olingan!",
+                          icon: "warning",
+                          buttons: true,
+                          dangerMode: true,
+                        }).then((willDelete) => {
+                          if (willDelete) {
+                            window.location="/ijaraberilgan";
+                          }else{
+                            window.location="/ijaraberilgan";
+                          }
+                        });
+                      }
+                    }
+                    },
+                    error: function (error){
+                      swal({
+                        title: "Baza bilan bog'lanishda xatolik!",
+                        icon: "warning",
+                        buttons: true,
+                        dangerMode: true,
+                      }).then((willDelete) => {
+                        if (willDelete) {
+                          window.location="/ijaraberilgan";
+                        }else{
+                          window.location="/ijaraberilgan";
+                        }
+                      });
+                    }
+                  });
+    });
+
+    // $(document).ready(function (){
+    //   $(document).on("click","#qaytarildiCheked",function (){
+    //
+    //     var h1,h2;
+    //
+    //     // $.ajax({
+    //     //   url: baseUrl + "/api/tah",
+    //     //   type: 'PUT',
+    //     //   enctype: 'multipart/form-data',
+    //     //   data: data1,
+    //     //   processData: false,
+    //     //   contentType: false,
+    //     //   cache: false,
+    //     //   success: function (data, status, info) {
+    //     //     var a = data.split(",");
+    //     //     alert(data);
+    //     //     h1 = a[2];
+    //     //     h2 = a[3];
+    //     //   },
+    //     //   error: function (error) {
+    //     //     swal({
+    //     //       title: "Error! " + error,
+    //     //       text: "Malimot tahirlanmadi!",
+    //     //       icon: "error",
+    //     //       button: "Yopish",
+    //     //     });
+    //     //   }
+    //     // });
+    //
+    //
+    //     $tr = $(this).closest('tr');
+    //     var editObject1 = $tr.children("td").map(function () {
+    //       return $(this).text();
+    //     }).get();
+    //
+    //
+    //     var y = document.getElementById("berildiCheked").checked;
+    //     var x = document.getElementById("qaytarildiCheked").checked;
+    //     alert(x+"  "+editObject1[0]+"   "+y);
+    //
+    //
+    //       swal({
+    //         title: "Kitob qaytarildimi!",
+    //         icon: "warning",
+    //         buttons: true,
+    //         dangerMode: true,
+    //       }).then((willDelete) => {
+    //         if (willDelete) {
+    //           alert("get")
+    //
+    //           $.ajax({
+    //             url: baseUrl + "/api/true1/"+editObject1[0],
+    //             type: 'GET',
+    //             dataType:"json",
+    //             success:function (data){
+    //               alert("success");
+    //               window.location="/ijaraberilgan";
+    //             },
+    //             error: function (error){
+    //               alert("hatolik = "+error);
+    //             }
+    //           });
+    //
+    //         }else{
+    //           window.location="/ijaraberilgan";
+    //         }
+    //       });
+    //   })
+    // })
+
+  </script>
+</body>
+
+</html>
